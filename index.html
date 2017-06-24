@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>songify layout</title>
+	<title>Songify</title>
     <link rel="stylesheet" type="text/css" href="font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
@@ -60,6 +60,22 @@
             song.pause();
         }
     });
+
+        $('body').on('keypress',function(event){
+            if(event.keyCode == 32)
+            {
+                var song = document.querySelector('audio');
+                if (song.paused == true) {
+                    console.log('Playing');
+                    $('.play-icon').removeClass('fa-play').addClass('fa-pause');
+                    song.play();
+                } else {
+                    console.log('Pausing');
+                    $('.play-icon').removeClass('fa-pause').addClass('fa-play');
+                    song.pause();
+                }
+            }
+        })
         
 </script>
 </body>
