@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>songify layout</title>
+    <link rel="stylesheet" type="text/css" href="font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
+</head>
+<body>
+	<div class="wrapper">
+		<section class="cover">
+				<h1>Songify</h1><span class="brand-ext">the music box</span>
+				<h2> Enter name to access your account </h2>
+				<div>
+                <input type="text" placeholder="Name" id="name-input">
+                <button type="submit" id="go-button"> Go </button></div>
+		</section>
+			<div class="main hidden">
+		        <header> 
+		        <div class="left floated brand"><h1>Songify</h1><span class="brand-ext">the music box</span></div>
+		        <div class="right floated user-name">  </div> </header>
+		        <section class="content">
+		        <audio src="song.mp3" controls=""></audio>
+		        </section>
+		        <footer>
+                <div class="controls">
+                    <div class="player-buttons">
+                        <i class="fa fa-play clickable play-icon" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </footer>
+		        </div>
+	</div>
+	<script src="jquery.js"></script>
+    <script>
+        $('.cover button').on('click', function() {
+            var name = $('#name-input').val();
+            if(name.length >= 2){
+            var message = "Welcome, " + name;
+            $('.main .user-name').text(message);
+            $('.cover').addClass('hidden');
+            $('.main').removeClass('hidden');
+        }
+        else
+        {
+            $('#name-input').addClass('error');
+            console.log("From else part")
+        }
+        });
+        $('.play-icon').on('click', function() {
+        var song = document.querySelector('audio');
+        if (song.paused == true) {
+            console.log('Playing');
+            $('.play-icon').removeClass('fa-play').addClass('fa-pause');
+            song.play();
+        } else {
+            console.log('Pausing');
+            $('.play-icon').removeClass('fa-pause').addClass('fa-play');
+            song.pause();
+        }
+    });
+        
+</script>
+</body>
+</html>

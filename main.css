@@ -1,0 +1,116 @@
+html,body{
+	height: 100%;
+    width: 100%;
+    border: 0;
+    margin: 0;
+    font-family: 'Jura', sans-serif;
+}
+.wrapper{
+	height: 100%;
+    width: 100%;
+	background-color: #282828;
+}
+.hidden{
+	display: none;
+}
+.cover{
+	height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cover h1{
+	color: orange;
+	font-size: 55px;
+	font-family: 'Audiowide', cursive;
+	margin: 0px;
+	margin-bottom: 2px;
+}
+.brand-ext{
+	color: white;
+	font-weight: bold;
+}
+#name-input{
+    height: 35px;
+    width: 250px;
+    border-radius: 10px;
+    padding-left: 8px;
+    border:1px solid orange;
+    font-size: 16px;
+}
+#name-input:focus{
+	outline:none;
+}
+#go-button{
+    padding: 5px;
+    height: 35px;
+    width: 35px;
+    border-radius: 10px;
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    border:1px solid white;
+}
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.main header {
+    height: 80px;
+    background-color: #282828;
+    padding: 1rem;
+    color: #FFF;
+}
+
+.main .content {
+    flex:1;
+    background-color: #1f1f1f;
+}
+
+.main footer {
+    height: 80px;
+    background-color: #282828;
+    padding-top: 1rem;
+}
+header .brand h1{
+	color: orange;
+	font-size: 35px;
+	font-family: 'Audiowide', cursive;
+	margin: 0px;
+}
+.controls {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: teal;
+}
+audio{
+	width: 200px;
+}
+.hidden {
+    display: none;
+}
+.left.floated {
+    float: left;
+}
+.right.floated {
+    float: right;
+}
+
+.clickable {
+    cursor: pointer;
+}
+.error {
+    border: 3px solid red;
+}
+.play-icon{
+	color: white;
+}
