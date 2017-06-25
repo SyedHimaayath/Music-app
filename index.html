@@ -8,15 +8,15 @@
 	<link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
 </head>
 <body>
-	<div class="wrapper">
-		<section class="cover">
+	<div class="wrapper ">
+		<section class="cover hidden">
 				<h1>Songify</h1><span class="brand-ext">the music box</span>
 				<h2> Enter name to access your account </h2>
 				<div>
                 <input type="text" placeholder="Name" id="name-input">
                 <button type="submit" id="go-button"> Go </button></div>
 		</section>
-			<div class="main hidden">
+			<div class="main ">
 		        <header> 
 		        <div class="left floated brand"><h1>Songify</h1><span class="brand-ext">the music box</span></div>
 		        <div class="right floated user-name">  </div> </header>
@@ -26,7 +26,14 @@
 		        <footer>
                 <div class="controls">
                     <div class="player-buttons">
+                        <i class="fa fa-repeat clickable backward-icon inactive" title="Repeat" aria-hidden="true"></i>
+                        <i class="fa fa-step-backward clickable backward-icon" title="Previous" aria-hidden="true"></i>
+                        <i class="fa fa-fast-backward clickable backward-icon" title="Fast-backward" aria-hidden="true"></i>
                         <i class="fa fa-play clickable play-icon" aria-hidden="true"></i>
+                        <i class="fa fa-fast-forward clickable forward-icon" title="Fast-forward" aria-hidden="true"></i>
+                        <i class="fa fa-step-forward clickable backward-icon" title="Next" aria-hidden="true"></i>
+                        <i class="fa fa-random clickable backward-icon inactive" title="Shuffle" aria-hidden="true"></i>
+
                     </div>
                 </div>
             </footer>
