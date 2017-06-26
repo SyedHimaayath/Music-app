@@ -85,11 +85,11 @@ header .brand h1{
 	font-family: 'Audiowide', cursive;
 	margin: 0px;
 }
-.controls {
+.player-buttons {
     display:flex;
+    font-size: 1.5rem;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
 }
 .hidden {
     display: none;
@@ -107,12 +107,6 @@ header .brand h1{
 .error {
     border: 3px solid red;
 }
-.player-buttons{
-    border-bottom: 3px solid #888;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    padding:5px;
-}
 .play-icon{
 	color: white;
     margin:0px 30px;
@@ -129,4 +123,85 @@ header .brand h1{
 }
 .inactive{
     color: #aaa;
+}
+
+.progress-wrapper {
+    margin-top: 0.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-wrapper span {
+    color: #959595;
+}
+
+.player-progress {
+    height: 8px;
+    width: 700px;
+    background-color: #3d3d3d;
+    border-radius: 4px;
+    margin-right: 6px;
+    margin-left: 6px;
+}
+
+.progress-filled {
+    background-color: #959595;
+    height: 8px;
+    border-radius: 4px;
+    width: 0;
+
+}
+.main .content {
+    width: 800px;
+    margin: 2rem auto;
+}
+
+.list-headers {
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+
+.list-headers > div {
+    width: 150px;
+    display: inline-block;
+}
+
+.list-headers > div:first-child {
+    width: 330px;
+}
+
+.list-headers > div:last-child {
+    text-align: right;
+}
+
+.song-list .song {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+    min-height: 30px;
+    cursor: pointer;
+}
+
+.song > span {
+    display: inline-block;
+    width: 150px;
+    overflow: hidden;
+    height: 1rem;
+}
+.song > span:first-child {
+    width: 330px;
+}
+
+.song .song-duration {
+    text-align: right;
+}
+
+.song-list .song:hover {
+    background-color: #282828;
+}
+
+
+.song-length {
+    text-align: right;
 }
