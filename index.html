@@ -82,7 +82,7 @@
     <script>
         $('.cover button').on('click', function() {
             var name = $('#name-input').val();
-            if(name.length >= 2)
+            if(name.length >= 2)//user gets access only if username input value is greater than or equal to 2 
             {
                 var message = "Welcome, " + name;
                 $('.main .user-name').text(message);
@@ -96,13 +96,14 @@
             }
         });
 
+        //function to manage the play and pause interface using the fontawesome icons
         function toggleSong(){
             var song = document.querySelector('audio');
         if (song.paused == true) {
-            $('.play-icon').removeClass('fa-play').addClass('fa-pause');
+            $('.play-icon').removeClass('fa-play').addClass('fa-pause');//removes play icon and adds pause icon
             song.play();
         } else {
-            $('.play-icon').removeClass('fa-pause').addClass('fa-play');
+            $('.play-icon').removeClass('fa-pause').addClass('fa-play');//removes pause icon and adds play icon
             song.pause();
         }
         }
@@ -111,8 +112,9 @@
             toggleSong();
         });
 
+        //function to manage the play and pause functionality using the spacebar(keyboard keys)
         $('body').on('keypress',function(event){
-            if(event.keyCode == 32)
+            if(event.keyCode == 32) //spacebar key holds value 32
             {
                 toggleSong();
             }
@@ -137,27 +139,33 @@
             return ret;
         }
 
-        function updateCurrentTime(){
+        //updates the current time and the duration of the songs.
+        function updateCurrentTime(){ 
             var song = document.querySelector('audio');
             var currentTime = Math.floor(song.currentTime);
+            // uses the function fancyTimeFormat to convert the current time seconds to minutes
             currentTime = fancyTimeFormat(currentTime);
             var duration = Math.floor(song.duration);
+            // uses the function fancyTimeFormat to convert the duration seconds to minutes
             duration = fancyTimeFormat(duration)
             $('.time-elapsed').text(currentTime);
             $('.song-duration').text(duration);
         }
 
+        //does the stipulated functions after the window is loaded
         window.onload = function() {
-            var songlist = ['Why not me','Jaaniya','Aye dil bata','Safarnama'];
-            var fileNames = ['song1.mp3','song2.mp3','song3.mp3','song4.mp3'];
+            var songlist = ['Why not me','Jaaniya','Aye dil bata','Safarnama']; //Listing the songs using array
+            var fileNames = ['song1.mp3','song2.mp3','song3.mp3','song4.mp3'];  //Listing the songs to add to the audio source
             $('#song1 .song-name').text(songlist[0]);
             $('#song2 .song-name').text(songlist[1]);
             $('#song3 .song-name').text(songlist[2]);
             $('#song4 .song-name').text(songlist[3]);
 
+            //when song1 is selcted this function works
             $('#song1').click(function() {
             var audio = document.querySelector('audio');
             var currentSong = audio.src;
+            //we check wether the song being palyed is as same as the song being requested(song1)
             if(currentSong.search(fileNames[0]) != -1)
             {
             toggleSong();
@@ -171,6 +179,7 @@
             $('#song2').click(function() {
             var audio = document.querySelector('audio');
             var currentSong = audio.src;
+            //we check wether the song being palyed is as same as the song being requested(song2)
             if(currentSong.search(fileNames[1]) != -1)
             {
             toggleSong();
@@ -184,6 +193,7 @@
             $('#song3').click(function() {
             var audio = document.querySelector('audio');
             var currentSong = audio.src;
+            //we check wether the song being palyed is as same as the song being requested(song3)
             if(currentSong.search(fileNames[2]) != -1)
             {
             toggleSong();
@@ -197,6 +207,7 @@
             $('#song4').click(function() {
             var audio = document.querySelector('audio');
             var currentSong = audio.src;
+            //we check wether the song being palyed is as same as the song being requested(song4)
             if(currentSong.search(fileNames[3]) != -1)
             {
             toggleSong();
@@ -207,10 +218,11 @@
             }
             });
 
+            //checks and changes the time for every 1 second
             updateCurrentTime();
             setInterval(function() {
             updateCurrentTime();
-            },1000);
+            },1000); //1000 represents time in milliseconds
         }
 
 </script>
