@@ -110,7 +110,7 @@
         }
 
         function changeCurrentSongDetails(songObj) {
-            $('.current-song-image').attr('src','img/' + songObj.image)
+            $('.current-song-image').attr('src','Img/' + songObj.image)
             $('.current-song-name').text(songObj.name)
             $('.current-song-album').text(songObj.album)
         }
