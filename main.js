@@ -227,3 +227,13 @@ $('audio').on('ended',function(){
 
 
 function timeJump(){var song = document.querySelector('audio');song.currentTime=song.duration-5;}
+
+$('#see-moodlist').on('click',function(){
+    $('#songs_wrapper').addClass('hidden');
+    $('#mood-list').removeClass('hidden');
+
+})
+$('#see-playlist').on('click',function(){
+    $('#mood-list').addClass('hidden')
+     $('#songs_wrapper').removeClass('hidden');
+})

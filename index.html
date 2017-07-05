@@ -2,11 +2,12 @@
 <html>
 <head>
 	<title>Songify</title>
-    <link rel="stylesheet" type="text/css" href="font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="font-awesome.css"> 
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
+    <style>#slider { margin: 10px; }    </style>
 </head>
 <body>
 	<div class="wrapper ">
@@ -22,8 +23,41 @@
     		        <div class="left floated brand"><h1>Songify</h1><span class="brand-ext">the music box</span></div>
     		        <div class="right floated user-name">  </div> 
                 </header>
+
 		        <section class="content">
+
+                <div class="top-content">
+                <ul class="option-list">
+                    <li>Home</li>
+                    <li id="see-playlist">Playlist</li>
+                    <li id="see-moodlist">Mood list</li>
+                    <li>Languages</li>
+                    <li>Editor's Choice</li>
+                    </ul>
+                </div>
 		        <audio src="song1.mp3"></audio>
+                
+                <!--Mood-list building starts-->
+                <div class="hidden" id="mood-list">
+                    <ul class="img-list">
+                        <li><div class="mood mood1"><span>Hello World</span></div></li>
+
+                        <li><div class="mood mood2"><span>Hello World</span></div></li>
+
+                        <li><div class="mood mood3"><span>Hello World</span></div></li>
+
+                        <li><div class="mood mood4"><span>Hello World</span></div></li>
+
+                        <li><div class="mood mood5"><span>Hello World</span></div></li>
+
+                        <li><div class="mood mood6"><span>Hello World</span></div></li>
+
+                        <li><div class="mood mood7"><span>Hello World</span></div></li>
+
+                        <li><div class="mood mood8"><span>Hello World</span></div></li>
+                    </ul>
+                </div>
+                <!--Mood-list building ends-->
                 <table id="songs">
                 <thead class="list-headers">
                 <tr>
@@ -33,7 +67,6 @@
                     <td> Duration </td>
                 </tr>
                 </thead>
-                <!-- <tr class="song-list"> -->
                 <tbody>
                     <tr class="song" id="song1">
                         <td class="song-name"></td>
@@ -61,15 +94,16 @@
                     </tr>
                 </tbody>
                 </table>
+                
+		        </section>
+		        <footer>
                 <div class="current-song-wrapper">
                     <img class="current-song-image">
                     <div>
                         <p class="current-song-name"></p>
                         <p class="current-song-album"></p>
                     </div>
-                </div>
-		        </section>
-		        <footer>
+                </div><div class="interactive-pane">
                 <div class="controls">
                     <div class="player-buttons">
                         <i class="fa fa-repeat clickable backward-icon inactive" title="Repeat" aria-hidden="true"></i>
@@ -85,13 +119,17 @@
                             <div class="progress-filled"> </div>
                         </div>
                         <span class="song-duration"></span>
-                    </div>
+                </div></div>
+                <!-- <div class="responsive-pane">
+                    <p>V O L U M E</p>
+                </div> -->
             </footer>
 		        </div>
 	</div>
 	<script src="jquery.js"></script>
     <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js">
     </script>
+
     <script src="main.js"></script>
 </body>
 </html>

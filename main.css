@@ -10,9 +10,7 @@ html,body{
     width: 100%;
 	background-color: #282828;
 }
-.hidden{
-	display: none;
-}
+
 .cover{
 	height: 90%;
     width: 100%;
@@ -76,7 +74,7 @@ html,body{
 }
 
 .main footer {
-    height: 60px;
+    height: 80px;
     background-color: #282828;
     padding-top: 1rem;
 }
@@ -91,6 +89,7 @@ header .brand h1{
     font-size: 1.5rem;
     justify-content: center;
     align-items: center;
+    margin-top: 10px;
 }
 .hidden {
     display: none;
@@ -125,7 +124,11 @@ header .brand h1{
 .inactive{
     color: #aaa;
 }
-
+/*.interactive-pane{
+    position: absolute;
+    right: 0;
+    margin-right: 30px;
+}*/
 .progress-wrapper {
     margin-top: 0.3rem;
     display: flex;
@@ -139,7 +142,7 @@ header .brand h1{
 
 .player-progress {
     height: 8px;
-    width: 700px;
+    width: 650px;
     background-color: #3d3d3d;
     border-radius: 4px;
     margin-right: 6px;
@@ -153,8 +156,10 @@ header .brand h1{
     width: 0;
 }
 .main .content {
-    width: 800px;
-    margin: 2rem auto;
+    width:850px;
+    margin: 0px auto;
+   /* padding-left:30px;
+    padding-right:30px;*/
 }
 
 .list-headers {
@@ -191,38 +196,36 @@ header .brand h1{
     text-align: right;
 }
 
-.song-list .song:hover {
-    background-color: #282828;
-}
-
-
 .song-length {
     text-align: right;
 }
-.content {
+/*.content {
     position: relative;
-}
+}*/
 .current-song-wrapper {
     position: absolute;
     bottom: 0;
+    margin-bottom: 10px;
+    margin-left: 40px;
     display: flex;
 }
 
 .current-song-image {
-    height: 100px;
-    width: 100px;
+    height: 70px;
+    width: 70px;
     margin-right: 1rem;
 }
 
 .current-song-name {
-    font-size: 1.4rem;
-    margin-top: 4px;
+    font-size: 1.3rem;
+    margin-top: 2px;
     margin-bottom: 0;
 }
 
 .current-song-album {
     margin-top: 0.4rem;
 }
+
 table{
     width:800px;
     margin: 0px;
@@ -231,8 +234,10 @@ table{
 /*DataTables overrides*/
 table.dataTable tbody tr {
     background-color: initial;
-    cursor: pointer;
-
+    cursor: pointer;   
+}
+table.dataTable tbody tr:hover{
+    background-color: #282828;
 }
 #songs_info {
     display: none;
@@ -245,4 +250,92 @@ table.dataTable tbody tr {
     width: 400px;
     margin-bottom: 1rem;
     font-size: 16px;
+}
+
+.responsive-pane{
+    position: absolute;
+    right: 0;
+    bottom:0;
+    margin-right: 50px;
+    margin-bottom: 10px;
+    display: flex;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.top-content{
+    width:850px;
+    margin:0px auto;
+}
+.option-list li{
+    display: inline-block;
+    margin: 0px 40px;
+    margin-bottom: 2rem;
+     cursor: pointer;
+     border-bottom: 2px solid transparent;
+}
+.option-list li:hover{
+    border-bottom: 2px solid orange;
+}
+#mood-list{
+    width: 700px;
+    height:324px;
+    margin:2rem auto;
+}
+/*#mood-list .img-list{
+    padding: 7px;
+    align-self: center;
+}*/
+#mood-list li{
+    display: inline-block;
+    padding:3px;
+}
+.mood{
+    opacity:.8;
+    cursor: pointer;
+    width: 150px;
+    height:150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    border:1px solid white;
+}
+.mood span{
+     margin: 0px auto;
+}
+.mood:hover{
+    opacity: 1;
+    border:1px solid orange;
+}
+.mood1{
+    background-image: url(Img/song1.jpg);
+    background-position: center;
+}
+.mood2{
+    background-image: url(Img/song2.jpg);
+    background-position: center;
+}
+.mood3{
+    background-image: url(Img/song3.jpg);
+    background-position: center;
+}
+.mood4{
+    background-image: url(Img/song4.jpg);
+    background-position: center;
+}
+.mood5{
+    background-image: url(Img/song4.jpg);
+    background-position: center;
+}
+.mood6{
+    background-image: url(Img/song3.jpg);
+    background-position: center;
+}
+.mood7{
+    background-image: url(Img/song2.jpg);
+    background-position: center;
+}
+.mood8{
+    background-image: url(Img/song1.jpg);
+    background-position: center;
 }
