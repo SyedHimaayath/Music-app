@@ -109,13 +109,21 @@
             var song = document.querySelector('audio');
             var currentTime = Math.floor(song.currentTime);
             // uses the function fancyTimeFormat to convert the current time seconds to minutes
-            currentTime = fancyTimeFormat(currentTime);
             var duration = Math.floor(song.duration);
             // uses the function fancyTimeFormat to convert the duration seconds to minutes
+            var bar=(currentTime*100)/duration;
+            currentTime = fancyTimeFormat(currentTime);
             duration = fancyTimeFormat(duration)
             $('.time-elapsed').text(currentTime);
             $('.song-duration').text(duration);
+            Progressbar(bar);
         }
+        function Progressbar(bar){
+          var ele = document.querySelector('.progress-filled');
+          ele.style.width= bar +"%";
+          //console.log(bar);
+    }
+
 
         function changeCurrentSongDetails(songObj) {
             $('.current-song-image').attr('src','Img/' + songObj.image)
