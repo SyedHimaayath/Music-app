@@ -176,7 +176,7 @@ header .brand h1{
     text-align: right;
 }
 
-.song-list .song {
+.song {
     padding-top: 0.5rem;
    /* padding-bottom: 0.5rem;*/
     border-bottom: 1px solid rgba(255,255,255,0.5);
@@ -184,13 +184,7 @@ header .brand h1{
     cursor: pointer;
 }
 
-.song > span {
-    display: inline-block;
-    width: 150px;
-    overflow: hidden;
-    height: 1.5rem;
-}
-.song > span:first-child {
+.song > td {
     width: 330px;
 }
 
@@ -229,6 +223,10 @@ header .brand h1{
 
 .current-song-album {
     margin-top: 0.4rem;
+}
+table{
+    width:800px;
+    margin: 0px;
 }
 
 /*DataTables overrides*/

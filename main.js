@@ -10,9 +10,13 @@
             else
             {
                 $('#name-input').addClass('error');
-                console.log("From else part")
+                alert("Username should be more than 3 chars");
             }
         });
+
+        var currentSongNumber = 1;
+        var willLoop = 0;
+        var willShuffle = 0;
 
         //function to manage the play and pause interface using the fontawesome icons
         function toggleSong(){
@@ -27,13 +31,17 @@
             }
         }
 
+        function stepForward(){
+            
+        }
+
         $('.play-icon').on('click', function() {
             toggleSong();
         });
 
-        var currentSongNumber = 1;
-        var willLoop = 0;
-        var willShuffle = 0;
+        $('.fa-step-forward').on('click',function(){
+            
+        });
 
         //function to manage the play and pause functionality using the spacebar(keyboard keys)
         $('body').on('keypress',function(event){
@@ -203,6 +211,9 @@ $('audio').on('ended',function(){
             changeCurrentSongDetails(nextSongObj);
             currentSongNumber = 1;
         }
+    }
+    else if(willShuffle==1){
+       
     }
 });
 
