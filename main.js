@@ -119,8 +119,8 @@
             Progressbar(bar);
         }
         function Progressbar(bar){
-          var ele = document.querySelector('.progress-filled');
-          ele.style.width= bar +"%";
+          var prog = document.querySelector('.progress-filled');
+          prog.style.width= bar +"%";
           //console.log(bar);
     }
 
