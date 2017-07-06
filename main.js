@@ -1,6 +1,6 @@
         $('.cover button').on('click', function() {
             var name = $('#name-input').val();
-            if(name.length >= 2)//user gets access only if username input value is greater than or equal to 2 
+            if(name.length > 2)//user gets access only if username input value is greater than or equal to 2 
             {
                 var message = "Welcome, " + name;
                 $('.main .user-name').text(message);
@@ -53,34 +53,34 @@
         });
         
         var songs = [{
-                'name': 'Why not me',
-                'artist': 'Enrique',
-                'album': 'Enrique',
-                'duration': '2:56',
+                'name': 'Aye Dil Bata',
+                'artist': 'Arijit Singh',
+                'album': 'Ishq Actually',
+                'duration': '5:42',
                'fileName': 'song1.mp3',
                'image' : 'song1.jpg'
             },
             {
-                'name': 'Jaaniya',
-                'artist': 'singer 2',
+                'name': 'Jaaniya O Jaaniya',
+                'artist': 'Sidharth Basrur',
                 'album': 'Haunted',
-                'duration': '3:15',
+                'duration': '5:07',
                 'fileName': 'song2.mp3',
                 'image' : 'song2.jpg'
             },
             {
-                'name': 'Aye Dil Bata',
-                'artist': 'singer 3',
-                'album': 'Aye Dil Bata',
-                'duration': '2:34',
+                'name': 'Safarnama',
+                'artist': 'Lucky Ali',
+                'album': 'Tamasha',
+                'duration': '4:11',
                 'fileName': 'song3.mp3',
                 'image' : 'song3.jpg'
             },
             {
-                'name': 'Safarnama',
-                'artist': 'singer 4',
-                'album': 'Tamasha',
-                'duration': '2:29',
+                'name': 'Why Not Me',
+                'artist': 'Enrique Iglesias',
+                'album': 'Euphoria',
+                'duration': '3:38',
                 'fileName': 'song4.mp3',
                 'image' : 'song4.jpg'
             }]
@@ -153,7 +153,6 @@
         
         //does the stipulated functions after the window is loaded
         window.onload = function() {
-
 
             changeCurrentSongDetails(songs[0]);
             for(var i =0; i < songs.length;i++) {
@@ -228,12 +227,12 @@ $('audio').on('ended',function(){
 
 function timeJump(){var song = document.querySelector('audio');song.currentTime=song.duration-5;}
 
+$('#see-playlist').on('click',function(){
+    $('#mood-list').addClass('hidden')
+     $('#songs_wrapper').removeClass('hidden');
+})
 $('#see-moodlist').on('click',function(){
     $('#songs_wrapper').addClass('hidden');
     $('#mood-list').removeClass('hidden');
 
-})
-$('#see-playlist').on('click',function(){
-    $('#mood-list').addClass('hidden')
-     $('#songs_wrapper').removeClass('hidden');
 })

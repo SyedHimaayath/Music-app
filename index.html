@@ -11,14 +11,14 @@
 </head>
 <body>
 	<div class="wrapper ">
-		<section class="cover hidden">
+		<section class="cover">
 				<h1>Songify</h1><span class="brand-ext">the music box</span>
 				<h2> Enter name to access your account </h2>
 				<div>
                 <input type="text" placeholder="Name" id="name-input">
                 <button type="submit" id="go-button"> Go </button></div>
 		</section>
-			<div class="main">
+			<div class="main hidden">
 		        <header> 
     		        <div class="left floated brand"><h1>Songify</h1><span class="brand-ext">the music box</span></div>
     		        <div class="right floated user-name">  </div> 
@@ -28,7 +28,7 @@
 
                 <div class="top-content">
                 <ul class="option-list">
-                    <li>Home</li>
+                    <li >Home</li>
                     <li id="see-playlist">Playlist</li>
                     <li id="see-moodlist">Mood list</li>
                     <li>Languages</li>
@@ -36,6 +36,10 @@
                     </ul>
                 </div>
 		        <audio src="song1.mp3"></audio>
+
+                <!-- Home Content build start -->
+                
+                <!-- Home Content build end -->
                 
                 <!--Mood-list building starts-->
                 <div class="hidden" id="mood-list">
@@ -61,7 +65,7 @@
                 <table id="songs">
                 <thead class="list-headers">
                 <tr>
-                    <td> Title </td> 
+                    <td class="number"> Title </td> 
                     <td> Artist </td>
                     <td> Album </td>
                     <td> Duration </td>

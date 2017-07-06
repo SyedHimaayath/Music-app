@@ -188,8 +188,8 @@ header .brand h1{
     cursor: pointer;
 }
 
-.song > td {
-    width: 330px;
+.song > td{
+    width: 280px;
 }
 
 .song .song-duration {
@@ -252,7 +252,7 @@ table.dataTable tbody tr:hover{
     font-size: 16px;
 }
 
-.responsive-pane{
+/*.responsive-pane{
     position: absolute;
     right: 0;
     bottom:0;
@@ -261,7 +261,9 @@ table.dataTable tbody tr:hover{
     display: flex;
     font-size: 1.3rem;
     font-weight: bold;
-}
+}*/
+
+/*css for navbar kind*/
 .top-content{
     width:850px;
     margin:0px auto;
@@ -276,15 +278,19 @@ table.dataTable tbody tr:hover{
 .option-list li:hover{
     border-bottom: 2px solid orange;
 }
+/*css for home*/
+/*#home{
+    width: 100%;
+    height: 400px;
+    background-image: url(home-collage.jpg);
+    background-position: center;
+}*/
+/*css for mood lists*/
 #mood-list{
     width: 700px;
     height:324px;
     margin:2rem auto;
 }
-/*#mood-list .img-list{
-    padding: 7px;
-    align-self: center;
-}*/
 #mood-list li{
     display: inline-block;
     padding:3px;
