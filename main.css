@@ -329,42 +329,51 @@ table.dataTable tbody tr:hover{
 }
 .mood span{
      margin: 0px auto;
+     font-weight: bold;
+     font-size: 1.2rem;
 }
 .mood:hover{
     opacity: 1;
     border:1px solid orange;
 }
 .mood1{
-    background-image: url(Img/song1.jpg);
+    background-image: url(Img/joy.png);
     background-position: center;
+    background-size: cover;
 }
 .mood2{
-    background-image: url(Img/song2.jpg);
+    background-image: url(Img/song4.jpg);
     background-position: center;
 }
 .mood3{
-    background-image: url(Img/song3.jpg);
+    background-image: url(Img/romantic.jpg);
     background-position: center;
+    background-size: cover;
 }
 .mood4{
-    background-image: url(Img/song4.jpg);
+    background-image: url(Img/roadtrip.jpg);
     background-position: center;
+    background-size: cover;
 }
 .mood5{
-    background-image: url(Img/song4.jpg);
+    background-image: url(Img/pop.jpg);
     background-position: center;
+    background-size: cover;
 }
 .mood6{
-    background-image: url(Img/song3.jpg);
+    background-image: url(Img/jazz.jpg);
     background-position: center;
+    background-size: cover;
 }
 .mood7{
-    background-image: url(Img/song2.jpg);
+    background-image: url(Img/retro.jpg);
     background-position: center;
+    background-size: cover;
 }
 .mood8{
-    background-image: url(Img/song1.jpg);
+    background-image: url(Img/edm.jpg);
     background-position: center;
+    background-size: cover;
 }
 
 @media screen and (max-width: 1200px){
