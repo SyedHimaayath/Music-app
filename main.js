@@ -32,7 +32,10 @@
         }
 
         function stepForward(){
-            
+            //code (mandatory)
+        }
+        function stepbackward(){
+            //code (mandatory)
         }
 
         $('.play-icon').on('click', function() {
@@ -52,6 +55,8 @@
             }
         });
         
+        //made an object and stored the complete info about all the songs
+        //songs=[0,1,2,3];
         var songs = [{
                 'name': 'Aye Dil Bata',
                 'artist': 'Arijit Singh',
@@ -107,23 +112,46 @@
         //updates the current time and the duration of the songs.
         function updateCurrentTime(){ 
             var song = document.querySelector('audio');
-            var currentTime = Math.floor(song.currentTime);
-            // uses the function fancyTimeFormat to convert the current time seconds to minutes
-            var duration = Math.floor(song.duration);
-            // uses the function fancyTimeFormat to convert the duration seconds to minutes
-            var bar=(currentTime*100)/duration;
+            var currentTime = Math.floor(song.currentTime);//removes digits present after decimal
+            var duration = Math.floor(song.duration);//same as above
+            var bar=(currentTime*100)/duration;//for progres bar 
             currentTime = fancyTimeFormat(currentTime);
             duration = fancyTimeFormat(duration)
             $('.time-elapsed').text(currentTime);
             $('.song-duration').text(duration);
             Progressbar(bar);
         }
+
         function Progressbar(bar){
           var prog = document.querySelector('.progress-filled');
           prog.style.width= bar +"%";
           //console.log(bar);
-    }
+        }
 
+        //setting the volume functionality
+        var values = document.querySelector('#vol-control');
+        var song = document.querySelector('audio');
+        values.addEventListener('change',setVolume)//watching the change
+        $('.responsive-pane i').on('click',function(){
+                $('.responsive-pane i').removeClass('fa-volume-up').addClass('fa-volume-off');
+                $('.responsive-pane i').removeClass('fa-volume-down').addClass('fa-volume-off');
+                $('.responsive-pane span').text('Muted');
+                song.volume=0;
+            console.log(song.volume);
+        })
+        function setVolume(){
+            song.volume = this.value / 100;//converts to values in btw 0 n 1
+            if(this.value < 50){
+                $('.responsive-pane i').removeClass('fa-volume-up').addClass('fa-volume-down');
+                $('.responsive-pane span').text(' ');
+                values=this.value;
+            }
+            else if(this.value > 50){
+                $('.responsive-pane i').removeClass('fa-volume-down').addClass('fa-volume-up');
+                $('.responsive-pane span').text(' ');
+                values=this.value;
+            }//changing the fa icon
+        };
 
         function changeCurrentSongDetails(songObj) {
             $('.current-song-image').attr('src','Img/' + songObj.image)
@@ -134,13 +162,13 @@
 
         var songNumber = 1;
 
-        function addSongNameClickEvent(songObj,position) {
+        function addSongNameClickEvent(songObj,position) {//passing object instead of just some specified value
             var id = '#song' + position;
             var songName = songObj.fileName;
             $(id).click(function() {
                 var audio = document.querySelector('audio');
                 var currentSong = audio.src;
-                if(songNumber !== position)
+                if(songNumber !== position)//if the requested song and the running song r not same
                 {
                     audio.src = songName;
                     songNumber = position;
@@ -156,6 +184,7 @@
 
             changeCurrentSongDetails(songs[0]);
             for(var i =0; i < songs.length;i++) {
+                    //using the songs object to fill in all the details
                 var obj = songs[i];
                 var name = '#song' + (i+1);
                 var song = $(name);
@@ -166,7 +195,7 @@
                 addSongNameClickEvent(obj,i+1)
             }
             $('#songs').DataTable({
-                paging : false
+                paging : false//removed unnecessary pagination
             });
 
             //checks and changes the time for every 1 second
@@ -178,14 +207,15 @@
 
 $('.fa-repeat').on('click',function(){
     $('.fa-repeat').toggleClass('inactive');
-    willLoop = 1- willLoop;
+    willLoop = 1- willLoop; //for repeat
 });
 
 $('.fa-random').on('click',function(){
     $('.fa-random').toggleClass('inactive');
-    willShuffle = 1- willShuffle;
+    willShuffle = 1- willShuffle; //for shuffle
 });
 
+//to keep songs continuing and checking if or not repeat is requested
 $('audio').on('ended',function(){
     var audio = document.querySelector('audio');
     if(willLoop==0){

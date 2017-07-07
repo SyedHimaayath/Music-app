@@ -51,6 +51,7 @@ html,body{
     font-weight: bold;
     font-size: 15px;
     border:1px solid white;
+    outline-width: 1px;
 }
 .main {
     width: 100%;
@@ -71,6 +72,14 @@ html,body{
 .main .content {
     flex:1;
     background-color: #1f1f1f;
+}
+.main input[type=search]{
+   border-radius: 5px;
+   border-color: black;
+   padding-left: 10px;
+}
+.main input[type=search]:focus{
+    outline: none;
 }
 
 .main footer {
@@ -252,17 +261,29 @@ table.dataTable tbody tr:hover{
     font-size: 16px;
 }
 
-/*.responsive-pane{
+.responsive-pane{
     position: absolute;
     right: 0;
     bottom:0;
     margin-right: 50px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     display: flex;
     font-size: 1.3rem;
     font-weight: bold;
-}*/
-
+}
+.fa-volume-up{
+    color: orange;
+}
+.fa-volume-down{
+    color: orange;
+}
+.fa-volume-off{
+    color: orange;
+}
+.responsive-pane span{
+    font-size: 1rem;
+    font-weight: normal;
+}
 /*css for navbar kind*/
 .top-content{
     width:850px;
@@ -344,4 +365,53 @@ table.dataTable tbody tr:hover{
 .mood8{
     background-image: url(Img/song1.jpg);
     background-position: center;
+}
+
+@media screen and (max-width: 1200px){
+    .current-song-wrapper {
+        position: absolute;
+        left: 0;
+        margin-bottom: 110px;
+        margin-left: 150px;
+        display: flex;
+    }
+    .current-song-image {
+        height: 150px;
+        width: 150px;
+        margin-right: 1rem;
+    }
+
+    .current-song-name {
+        font-size: 1.5rem;
+        margin-top: 2px;
+        margin-bottom: 0;
+    }
+
+    .current-song-album {
+        margin-top: 0.6rem;
+    }
+    .responsive-pane{
+    position: absolute;
+    right: 0;
+    bottom:0;
+    margin-right: 150px;
+    margin-bottom: 110px;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.responsive-pane i{
+    display: none;
+}
+.responsive-pane input[type=range]{
+    -webkit-appearance: slider-vertical;
+    width:50px;
+    height:120px;
+}
+#mood-list{
+    width: 700px;
+    height:324px;
+    margin:0 auto;
+}
 }

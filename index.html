@@ -11,14 +11,14 @@
 </head>
 <body>
 	<div class="wrapper ">
-		<section class="cover">
+		<section class="cover hidden">
 				<h1>Songify</h1><span class="brand-ext">the music box</span>
 				<h2> Enter name to access your account </h2>
 				<div>
                 <input type="text" placeholder="Name" id="name-input">
                 <button type="submit" id="go-button"> Go </button></div>
 		</section>
-			<div class="main hidden">
+			<div class="main">
 		        <header> 
     		        <div class="left floated brand"><h1>Songify</h1><span class="brand-ext">the music box</span></div>
     		        <div class="right floated user-name">  </div> 
@@ -44,6 +44,7 @@
                 <!--Mood-list building starts-->
                 <div class="hidden" id="mood-list">
                     <ul class="img-list">
+                        
                         <li><div class="mood mood1"><span>Hello World</span></div></li>
 
                         <li><div class="mood mood2"><span>Hello World</span></div></li>
@@ -107,7 +108,8 @@
                         <p class="current-song-name"></p>
                         <p class="current-song-album"></p>
                     </div>
-                </div><div class="interactive-pane">
+                </div>
+                <div class="interactive-pane">
                 <div class="controls">
                     <div class="player-buttons">
                         <i class="fa fa-repeat clickable backward-icon inactive" title="Repeat" aria-hidden="true"></i>
@@ -120,19 +122,24 @@
                 <div class="progress-wrapper">
                         <span class="time-elapsed"> </span>
                         <div class="player-progress">
-                            <div class="progress-filled"> </div>
+                            <div class="progress-filled"></div>
                         </div>
                         <span class="song-duration"></span>
-                </div></div>
-                <!-- <div class="responsive-pane">
-                    <p>V O L U M E</p>
-                </div> -->
+                </div>
+                </div>
+
+                <div class="responsive-pane">
+                    <i class="fa fa-volume-up" aria-hidden="true"></i>
+                    <span>&nbsp;</span>
+                   <input id="vol-control" type="range" min="0" max="100" step="1">
+                </div>
             </footer>
 		        </div>
 	</div>
 	<script src="jquery.js"></script>
     <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js">
     </script>
+    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
 
     <script src="main.js"></script>
 </body>
