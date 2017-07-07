@@ -56,8 +56,9 @@
         });
         
         //made an object and stored the complete info about all the songs
+        var allSongs=[songs1,songs2,songs3,songs4,songs5,songs6,songs7,songs8];
         //songs=[0,1,2,3];
-        var songs = [{
+        var songs1 = [{
                 'name': 'Aye Dil Bata',
                 'artist': 'Arijit Singh',
                 'album': 'Ishq Actually',
@@ -89,7 +90,38 @@
                 'fileName': 'song4.mp3',
                 'image' : 'song4.jpg'
             }]
-
+        var songs2=[{  'name': 'song1',
+                       'artist': 'Arijit Singh',
+                       'album': 'Ishq Actually',
+                       'duration': '5:42',
+                       'fileName': 'song1.mp3',
+                       'image' : 'song1.jpg'
+                },
+                {    'name': 'song2',
+                     'artist': 'song3',
+                     'album': 'Haunted',
+                     'duration': '5:07',
+                     'fileName': 'song2.mp3',
+                     'image' : 'song2.jpg'
+                },
+                    {'name': 'song3',
+                'artist': 'Lucky Ali',
+                'album': 'Tamasha',
+                'duration': '4:11',
+                'fileName': 'song3.mp3',
+                'image' : 'song3.jpg'
+            },
+            {
+                'name': 'song4',
+                'artist': 'Enrique Iglesias',
+                'album': 'Euphoria',
+                'duration': '3:38',
+                'fileName': 'song4.mp3',
+                'image' : 'song4.jpg'}]
+        
+       $('.mood2').on('click',function(){
+               var songs=allSongs[1];
+       });
         function fancyTimeFormat(time)
         {   
             // Hours, minutes and seconds
