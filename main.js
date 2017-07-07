@@ -56,9 +56,9 @@
         });
         
         //made an object and stored the complete info about all the songs
-        var allSongs=[songs1,songs2,songs3,songs4,songs5,songs6,songs7,songs8];
+        //var allSongs=[songs1,songs2]//,songs3,songs4,songs5,songs6,songs7,songs8];
         //songs=[0,1,2,3];
-        var songs1 = [{
+        var songs = [{
                 'name': 'Aye Dil Bata',
                 'artist': 'Arijit Singh',
                 'album': 'Ishq Actually',
@@ -90,38 +90,57 @@
                 'fileName': 'song4.mp3',
                 'image' : 'song4.jpg'
             }]
-        var songs2=[{  'name': 'song1',
+        var songs2 =[{  'name': 'song1',
                        'artist': 'Arijit Singh',
                        'album': 'Ishq Actually',
                        'duration': '5:42',
-                       'fileName': 'song1.mp3',
-                       'image' : 'song1.jpg'
+                       'fileName': 'song3.mp3',
+                       'image' : 'song3.jpg'
                 },
                 {    'name': 'song2',
                      'artist': 'song3',
                      'album': 'Haunted',
                      'duration': '5:07',
-                     'fileName': 'song2.mp3',
-                     'image' : 'song2.jpg'
+                     'fileName': 'song4.mp3',
+                     'image' : 'song4.jpg'
                 },
                     {'name': 'song3',
                 'artist': 'Lucky Ali',
                 'album': 'Tamasha',
                 'duration': '4:11',
-                'fileName': 'song3.mp3',
-                'image' : 'song3.jpg'
+                'fileName': 'song1.mp3',
+                'image' : 'song1.jpg'
             },
             {
                 'name': 'song4',
                 'artist': 'Enrique Iglesias',
                 'album': 'Euphoria',
                 'duration': '3:38',
-                'fileName': 'song4.mp3',
-                'image' : 'song4.jpg'}]
-        
-       $('.mood2').on('click',function(){
-               var songs=allSongs[1];
-       });
+                'fileName': 'song2.mp3',
+                'image' : 'song2.jpg'
+            }]
+
+        // var mood2=document.querySelector('.mood2');
+        // mood2.addEventListener('click',function(){
+        //     splfunction();
+        // });
+        // function splfunction(){
+        //     changeCurrentSongDetails(songs2[0]);
+        //     // var song = document.querySelector('audio');
+        //     // song.src=songs2[0].fileName;
+        //     for(var i =0; i < songs2.length;i++) {
+        //             //using the songs object to fill in all the details
+        //         var obj = songs2[i];
+        //         var name = '#song' + (i+1);
+        //         var song = $(name);
+        //         song.find('.song-name').text(obj.name);
+        //         song.find('.song-artist').text(obj.artist);
+        //         song.find('.song-album').text(obj.album);
+        //         song.find('.song-length').text(obj.duration);
+        //         addSongNameClickEvent(obj,i+1)
+        //     }
+        // }
+
         function fancyTimeFormat(time)
         {   
             // Hours, minutes and seconds
@@ -213,7 +232,6 @@
         
         //does the stipulated functions after the window is loaded
         window.onload = function() {
-
             changeCurrentSongDetails(songs[0]);
             for(var i =0; i < songs.length;i++) {
                     //using the songs object to fill in all the details
@@ -286,7 +304,31 @@ $('audio').on('ended',function(){
     }
 });
 
+var next = document.querySelector('.fa-step-forward')
+next.addEventListener('click',function(){
+    var audio=document.querySelector('auido');
+    if(songNumber<songs.length){
+        songNumber++;
+        changeCurrentSongDetails(songs[songNumber-1])
+    }
+   else if(songNumber=songs.length){
+      songNumber=1;
+       changeCurrentSongDetails(songs[0])
+    }
+});
 
+var previos = document.querySelector('.fa-step-backward')
+previos.addEventListener('click',function(){
+    var audio=document.querySelector('auido');
+    if(songNumber>1){
+        songNumber--;
+        changeCurrentSongDetails(songs[songNumber-1])
+}
+   else{
+        songNumber=4;
+       changeCurrentSongDetails(songs[3])
+    }
+})
 function timeJump(){var song = document.querySelector('audio');song.currentTime=song.duration-5;}
 
 $('#see-playlist').on('click',function(){
@@ -298,3 +340,6 @@ $('#see-moodlist').on('click',function(){
     $('#mood-list').removeClass('hidden');
 
 })
+// $('.mood').on('click',function(){
+//             $('#mood-list').addClass('hidden')
+//        });
