@@ -91,7 +91,7 @@ form{
 
 .main .content {
     flex:1;
-    background-color: #1f1f1f;
+    /*background-color: #1f1f1f;*/
 }
 .main input[type=search]{
    border-radius: 5px;
@@ -316,11 +316,13 @@ input[type=range]{
 }
 /*css for navbar kind*/
 .top-content{
-    width:850px;
+    width:950px;
     margin:0px auto;
     background-color: grey;
     z-index: 10;
     border-radius: 5px;
+    display: flex;
+    justify-content: center;
 }
 .top-content ul{
     margin:0px;
@@ -329,7 +331,7 @@ input[type=range]{
 }
 .option-list li{
     display: inline-block;
-    margin: 0px 40px;
+    margin: 0px 50px;
     cursor: pointer;
     border-bottom: 2px solid transparent;
 }
@@ -372,7 +374,6 @@ input[type=range]{
 }
 .mood:hover{
     opacity: 1;
-    border:1px solid orange;
 }
 .mood1{
     background-image: url(Img/joy.png);
@@ -412,6 +413,13 @@ input[type=range]{
     background-image: url(Img/edm.jpg);
     background-position: center;
     background-size: cover;
+}
+
+#home-content{
+    width: 850px;
+    height:400px;
+    margin-top:20px;
+    background-color: grey;
 }
 
 @media screen and (max-width: 1200px){

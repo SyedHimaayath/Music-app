@@ -257,6 +257,7 @@
             $('#songs').DataTable({
                 paging : false//removed unnecessary pagination
             });
+            $('#songs_wrapper').addClass('hidden');
 
             //checks and changes the time for every 1 second
             updateCurrentTime();
@@ -352,11 +353,20 @@ previos.addEventListener('click',function(){
 
 function timeJump(){var song = document.querySelector('audio');song.currentTime=song.duration-5;}
 
-$('#see-playlist').on('click',function(){
+$('#see-home').on('click',function(){
     $('#mood-list').addClass('hidden')
-     $('#songs_wrapper').removeClass('hidden');
+    $('#songs_wrapper').addClass('hidden')
+    $('#songs').addClass('hidden')
+    $('#home-content').removeClass('hidden')
+})
+$('#see-playlist').on('click',function(){
+    $('#home-content').addClass('hidden')
+    $('#mood-list').addClass('hidden')
+     $('#songs_wrapper').removeClass('hidden')
+     $('#songs').removeClass('hidden')
 })
 $('#see-moodlist').on('click',function(){
+    $('#home-content').addClass('hidden');
     $('#songs_wrapper').addClass('hidden');
     $('#mood-list').removeClass('hidden');
 
