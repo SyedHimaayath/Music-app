@@ -1,15 +1,17 @@
         $('.cover button').on('click', function() {
             var name = $('#name-input').val();
-            if(name.length > 2)//user gets access only if username input value is greater than or equal to 2 
+            var pass = $('#password-input').val();
+            if(name == "test@acadview.com" && pass == "JavascriptRocks")//user gets access only if username input value is greater than or equal to 2 
             {
-                var message = "Welcome, " + name;
-                $('.main .user-name').text(message);
+                //var message = "Welcome, " + name;
+                //$('.main .user-name').text(message);
                 $('.cover').addClass('hidden');
                 $('.main').removeClass('hidden');
             }
             else
             {
                 $('#name-input').addClass('error');
+                $('#password-input').addClass('error');
                 alert("Username should be more than 3 chars");
             }
         });
@@ -359,6 +361,7 @@ $('#see-moodlist').on('click',function(){
     $('#mood-list').removeClass('hidden');
 
 })
+
 // $('.mood').on('click',function(){
 //             $('#mood-list').addClass('hidden')
 //        });
