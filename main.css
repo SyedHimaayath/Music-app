@@ -150,20 +150,26 @@ header .brand h1{
 }
 
 .player-progress {
-    height: 8px;
+    height: 3px;
     width: 650px;
     background-color: #3d3d3d;
     border-radius: 4px;
     margin-right: 6px;
     margin-left: 6px;
+    cursor: pointer;
 }
-
+.player-progress:hover{
+    height:8px;
+}
 .progress-filled {
     background-color: orange;
-    height: 8px;
+    height:inherit;
     border-radius: 4px;
     width: 0;
 }
+/*.progress-filled:hover{
+    height:8px;
+}*/
 .main .content {
     width:850px;
     margin: 0px auto;
@@ -270,6 +276,9 @@ table.dataTable tbody tr:hover{
     display: flex;
     font-size: 1.3rem;
     font-weight: bold;
+}
+input[type=range]{
+    cursor: pointer;
 }
 .fa-volume-up{
     color: orange;

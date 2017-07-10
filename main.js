@@ -178,6 +178,14 @@
           prog.style.width= bar +"%";
           //console.log(bar);
         }
+        $('.player-progress').click(function(event){
+            var $this=$(this);
+            var selectedLength= event.pageX-$this.offset().left;
+            var totalLength=$this.width();
+            var width=(selectedLength/totalLength)*100;
+            var song=document.querySelector('audio');
+            song.currentTime=(song.duration*width)/100;
+        });
 
         //setting the volume functionality
         var values = document.querySelector('#vol-control');
@@ -306,29 +314,40 @@ $('audio').on('ended',function(){
 
 var next = document.querySelector('.fa-step-forward')
 next.addEventListener('click',function(){
-    var audio=document.querySelector('auido');
+    var audio=document.querySelector('audio');
     if(songNumber<songs.length){
+        var nextSong = songs[songNumber];
+        audio.src=nextSong.fileName;
+        changeCurrentSongDetails(nextSong)
         songNumber++;
-        changeCurrentSongDetails(songs[songNumber-1])
+        toggleSong();
     }
    else if(songNumber=songs.length){
-      songNumber=1;
        changeCurrentSongDetails(songs[0])
+       toggleSong();
+        songNumber=1;
     }
 });
 
 var previos = document.querySelector('.fa-step-backward')
 previos.addEventListener('click',function(){
-    var audio=document.querySelector('auido');
+    var audio=document.querySelector('audio');
     if(songNumber>1){
-        songNumber--;
-        changeCurrentSongDetails(songs[songNumber-1])
-}
+            var prevSong=songs[songNumber-2];
+            audio.src=prevSong.fileName;
+            changeCurrentSongDetails(prevSong);
+            toggleSong();
+            songNumber--;
+        }
    else{
-        songNumber=4;
-       changeCurrentSongDetails(songs[3])
+            var prevSong=songs[songs.length-1];
+            audio.src=prevSong.fileName;
+            changeCurrentSongDetails(prevSong);
+            toggleSong();
+            songNumber=songs.length;
     }
 })
+
 function timeJump(){var song = document.querySelector('audio');song.currentTime=song.duration-5;}
 
 $('#see-playlist').on('click',function(){
