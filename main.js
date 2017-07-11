@@ -56,7 +56,7 @@
         //made an object and stored the complete info about all the songs
         //var allSongs=[songs1,songs2]//,songs3,songs4,songs5,songs6,songs7,songs8];
         //songs=[0,1,2,3];
-        var songs1 = [{
+        var songs = [{
                 'name': 'Aye Dil Bata',
                 'artist': 'Arijit Singh',
                 'album': 'Ishq Actually',
@@ -118,187 +118,6 @@
                 'fileName': 'song2.mp3',
                 'image' : 'song2.jpg'
             }]
-            // var songs3 =[{  
-            //             'name': 'Russian Roulette',
-            //            'artist': 'Rihanna',
-            //            'album': 'album1',
-            //            'duration': '3:47',
-            //            'fileName': 'song5.mp3',
-            //            'image' : 'song5.jpg'
-            //     },
-            //     {    'name': 'song2',
-            //          'artist': 'song3',
-            //          'album': 'album2',
-            //          'duration': '5:07',
-            //          'fileName': 'song4.mp3',
-            //          'image' : 'song4.jpg'
-            //     },
-            //         {'name': 'song3',
-            //     'artist': 'album3',
-            //     'album': 'Tamasha',
-            //     'duration': '4:11',
-            //     'fileName': 'song1.mp3',
-            //     'image' : 'song1.jpg'
-            // },
-            // {
-            //     'name': 'song4',
-            //     'artist': 'Enrique Iglesias',
-            //     'album': 'album4',
-            //     'duration': '3:38',
-            //     'fileName': 'song2.mp3',
-            //     'image' : 'song2.jpg'
-            // }]
-            // var songs4 =[{  
-            //             'name': 'Russian Roulette',
-            //            'artist': 'Rihanna',
-            //            'album': 'album1',
-            //            'duration': '3:47',
-            //            'fileName': 'song5.mp3',
-            //            'image' : 'song5.jpg'
-            //     },
-            //     {    'name': 'song2',
-            //          'artist': 'song3',
-            //          'album': 'album2',
-            //          'duration': '5:07',
-            //          'fileName': 'song4.mp3',
-            //          'image' : 'song4.jpg'
-            //     },
-            //         {'name': 'song3',
-            //     'artist': 'album3',
-            //     'album': 'Tamasha',
-            //     'duration': '4:11',
-            //     'fileName': 'song1.mp3',
-            //     'image' : 'song1.jpg'
-            // },
-            // {
-            //     'name': 'song4',
-            //     'artist': 'Enrique Iglesias',
-            //     'album': 'album4',
-            //     'duration': '3:38',
-            //     'fileName': 'song2.mp3',
-            //     'image' : 'song2.jpg'
-            // }]
-            // var songs5 =[{  
-            //             'name': 'Russian Roulette',
-            //            'artist': 'Rihanna',
-            //            'album': 'album1',
-            //            'duration': '3:47',
-            //            'fileName': 'song5.mp3',
-            //            'image' : 'song5.jpg'
-            //     },
-            //     {    'name': 'song2',
-            //          'artist': 'song3',
-            //          'album': 'album2',
-            //          'duration': '5:07',
-            //          'fileName': 'song4.mp3',
-            //          'image' : 'song4.jpg'
-            //     },
-            //         {'name': 'song3',
-            //     'artist': 'album3',
-            //     'album': 'Tamasha',
-            //     'duration': '4:11',
-            //     'fileName': 'song1.mp3',
-            //     'image' : 'song1.jpg'
-            // },
-            // {
-            //     'name': 'song4',
-            //     'artist': 'Enrique Iglesias',
-            //     'album': 'album4',
-            //     'duration': '3:38',
-            //     'fileName': 'song2.mp3',
-            //     'image' : 'song2.jpg'
-            // }]
-            // var songs6 =[{  
-            //             'name': 'Russian Roulette',
-            //            'artist': 'Rihanna',
-            //            'album': 'album1',
-            //            'duration': '3:47',
-            //            'fileName': 'song5.mp3',
-            //            'image' : 'song5.jpg'
-            //     },
-            //     {    'name': 'song2',
-            //          'artist': 'song3',
-            //          'album': 'album2',
-            //          'duration': '5:07',
-            //          'fileName': 'song4.mp3',
-            //          'image' : 'song4.jpg'
-            //     },
-            //         {'name': 'song3',
-            //     'artist': 'album3',
-            //     'album': 'Tamasha',
-            //     'duration': '4:11',
-            //     'fileName': 'song1.mp3',
-            //     'image' : 'song1.jpg'
-            // },
-            // {
-            //     'name': 'song4',
-            //     'artist': 'Enrique Iglesias',
-            //     'album': 'album4',
-            //     'duration': '3:38',
-            //     'fileName': 'song2.mp3',
-            //     'image' : 'song2.jpg'
-            // }]
-            // var songs7 =[{  
-            //             'name': 'Russian Roulette',
-            //            'artist': 'Rihanna',
-            //            'album': 'album1',
-            //            'duration': '3:47',
-            //            'fileName': 'song5.mp3',
-            //            'image' : 'song5.jpg'
-            //     },
-            //     {    'name': 'song2',
-            //          'artist': 'song3',
-            //          'album': 'album2',
-            //          'duration': '5:07',
-            //          'fileName': 'song4.mp3',
-            //          'image' : 'song4.jpg'
-            //     },
-            //         {'name': 'song3',
-            //     'artist': 'album3',
-            //     'album': 'Tamasha',
-            //     'duration': '4:11',
-            //     'fileName': 'song1.mp3',
-            //     'image' : 'song1.jpg'
-            // },
-            // {
-            //     'name': 'song4',
-            //     'artist': 'Enrique Iglesias',
-            //     'album': 'album4',
-            //     'duration': '3:38',
-            //     'fileName': 'song2.mp3',
-            //     'image' : 'song2.jpg'
-            // }]
-            // var songs8 =[{  
-            //             'name': 'Russian Roulette',
-            //            'artist': 'Rihanna',
-            //            'album': 'album1',
-            //            'duration': '3:47',
-            //            'fileName': 'song5.mp3',
-            //            'image' : 'song5.jpg'
-            //     },
-            //     {    'name': 'song2',
-            //          'artist': 'song3',
-            //          'album': 'album2',
-            //          'duration': '5:07',
-            //          'fileName': 'song4.mp3',
-            //          'image' : 'song4.jpg'
-            //     },
-            //         {'name': 'song3',
-            //     'artist': 'album3',
-            //     'album': 'Tamasha',
-            //     'duration': '4:11',
-            //     'fileName': 'song1.mp3',
-            //     'image' : 'song1.jpg'
-            // },
-            // {
-            //     'name': 'song4',
-            //     'artist': 'Enrique Iglesias',
-            //     'album': 'album4',
-            //     'duration': '3:38',
-            //     'fileName': 'song2.mp3',
-            //     'image' : 'song2.jpg'
-            // }]
-
 
         function fancyTimeFormat(time)
         {   
@@ -400,10 +219,10 @@
         
         //does the stipulated functions after the window is loaded
         window.onload = function() {
-            changeCurrentSongDetails(songs1[0]);
-            for(var i =0; i < songs1.length;i++) {
+            changeCurrentSongDetails(songs[0]);
+            for(var i =0; i < songs.length;i++) {
                     //using the songs object to fill in all the details
-                var obj = songs1[i];
+                var obj = songs[i];
                 var name = '#song' + (i+1);
                 var song = $(name);
                 song.find('.song-name').text(obj.name);
@@ -624,7 +443,6 @@ $('.mood8').on('click',function(){
 })
 var mood2=document.querySelector('.mood2');
         mood2.addEventListener('click',function(){
-            songNumber=5;
             splfunction();
 });
 
