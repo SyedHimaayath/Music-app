@@ -80,9 +80,11 @@ form{
     flex-direction: column;
     color: white; 
     background-color: #1f1f1f;
+    background-image: url(Img/musicnotes2.gif);
+    background-position: center;
 }
 
-.main header {
+.main .header1 {
     height: 60px;
     background-color: #282828;
     padding: 1rem;
@@ -188,9 +190,6 @@ header .brand h1{
     border-radius: 4px;
     width: 0;
 }
-/*.progress-filled:hover{
-    height:8px;
-}*/
 .main .content {
     width:850px;
     margin: 0px auto;
@@ -225,7 +224,7 @@ header .brand h1{
 }
 
 .song > td{
-    width: 280px;
+    width: 330px;
 }
 
 .song .song-duration {
@@ -257,6 +256,9 @@ header .brand h1{
     margin-top: 2px;
     margin-bottom: 0;
 }
+.current-song-wrapper p{
+    margin:0px;
+}
 
 .current-song-album {
     margin-top: 0.4rem;
@@ -265,6 +267,7 @@ header .brand h1{
 table{
     width:800px;
     margin: 0px;
+    background-color: #1f1f1f;
 }
 
 /*DataTables overrides*/
@@ -339,12 +342,18 @@ input[type=range]{
     border-bottom: 2px solid orange;
 }
 /*css for home*/
-/*#home{
+/*#home-content{
     width: 100%;
     height: 400px;
-    background-image: url(home-collage.jpg);
-    background-position: center;
+    margin-top: 20px;
+    background-color: grey;
 }*/
+.header2{
+    height: 60px;
+    background-color: none;
+    padding: 1rem;
+    color: #FFF;
+}
 /*css for mood lists*/
 #mood-list{
     width: 700px;
@@ -415,13 +424,61 @@ input[type=range]{
     background-size: cover;
 }
 
-#home-content{
-    width: 850px;
-    height:400px;
-    margin-top:20px;
-    background-color: grey;
+.main1{
+background-image: url(Img/loop.gif);
+background-position: center;
+background-size: cover;
+}.main2{
+background-image: url(Img/staystrong.jpg);
+background-position: center;
+background-size: cover;
+font-family: 'Boogaloo', cursive;
+font-size: 1.2rem;
+}.main3{
+background-image: url(Img/romantic1.gif);
+background-position: center;
+background-size: cover;
+font-family: 'Courgette', cursive;
+font-weight: normal;
+}.main4{
+background-image: url(Img/roadtrip1.jpg);
+background-position: center;
+font-family: cursive;
+background-size: cover;
 }
-
+.main5{
+background-image: url(Img/pop1.jpg);
+background-position: center;
+background-size: cover;
+}.main6{
+background-image: url(Img/jazz.jpg);
+}.main7{
+background-image: url(Img/retro.jpg);
+background-position: center;
+background-size: cover;
+font-family: 'Aldrich', sans-serif;
+}.main8{
+background-image: url(Img/edm2.jpg);
+background-position: center;
+background-size: cover;
+}
+.home1{
+    background-color: white;
+}.home2{
+    background-color: blue;
+}.home3{
+    background-color: green;
+}.home4{
+    background-color: grey;
+}.home5{
+    background-color: red;
+}.home6{
+    background-color: orange;
+}.home7{
+    background-color: yellow;
+}.home8{
+    background-color: pink;
+}
 @media screen and (max-width: 1200px){
     .current-song-wrapper {
         position: fixed;
@@ -464,17 +521,20 @@ input[type=range]{
     width:50px;
     height:120px;
 }
+.main .content{
+    margin:0px auto;
+}
 #mood-list{
-    width: 700px;
+    width: 100%;
     height:auto;
     margin:0 auto;
-    margin-top: 40px;
+    margin-top: 60px;
 }
 .mood{
     opacity:.8;
     cursor: pointer;
-    width: 300px;
-    height:300px;
+    width: 350px;
+    height:350px;
     display: flex;
     flex-direction: column;
     justify-content: center;

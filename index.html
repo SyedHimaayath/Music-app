@@ -7,7 +7,9 @@
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
-    <style>#slider { margin: 10px; }    </style>
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Boogaloo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
 </head>
 <body>
 	<div class="wrapper ">
@@ -21,7 +23,7 @@
                 </form>
 		</section>
 			<div class="main">
-		        <header> 
+		        <header class="header1 "> 
     		        <div class="left floated brand"><h1>Songify</h1><span class="brand-ext">the music box</span></div>
     		        <div class="right floated user-name">  </div> 
                 </header>
@@ -32,14 +34,16 @@
                     <li id="see-playlist">Playlist</li>
                     <li id="see-moodlist">Mood list</li>
                     <li>Languages</li>
-                    <li>Editor's Choice</li>
+                    <li>History</li>
                     </ul>
                 </div>
 		        <section class="content">
 		        <audio src="song1.mp3"></audio>
 
                 <!-- Home Content build start -->
-                    <div class="" id="home-content"></div>
+                    <div class="" id="home-content">
+
+                    </div>
                 <!-- Home Content build end -->
                 
                 <!--Mood-list building starts-->
@@ -48,7 +52,7 @@
                         
                         <li><div class="mood mood1"><span>Happy</span></div></li>
 
-                        <li id="#mood2"><div class="mood mood2"><span>Heart Broke</span></div></li>
+                        <li><div class="mood mood2"><span>Heart Broke</span></div></li>
 
                         <li><div class="mood mood3"><span>Romantic</span></div></li>
 
@@ -64,7 +68,7 @@
                     </ul>
                 </div>
                 <!--Mood-list building ends-->
-                <table id="songs" class="hidden">
+                <table id="songs" class="">
                 <thead class="list-headers">
                 <tr>
                     <td class="number"> Title </td> 
@@ -102,7 +106,7 @@
                 </table>
                 
 		        </section>
-		        <footer>
+		        <footer class="footer">
                 <div class="current-song-wrapper">
                     <img class="current-song-image">
                     <div>

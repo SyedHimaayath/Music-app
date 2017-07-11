@@ -44,10 +44,6 @@
             toggleSong();
         });
 
-        $('.fa-step-forward').on('click',function(){
-            
-        });
-
         //function to manage the play and pause functionality using the spacebar(keyboard keys)
         $('body').on('keypress',function(event){
             var target = event.target;
@@ -60,7 +56,7 @@
         //made an object and stored the complete info about all the songs
         //var allSongs=[songs1,songs2]//,songs3,songs4,songs5,songs6,songs7,songs8];
         //songs=[0,1,2,3];
-        var songs = [{
+        var songs1 = [{
                 'name': 'Aye Dil Bata',
                 'artist': 'Arijit Singh',
                 'album': 'Ishq Actually',
@@ -92,22 +88,23 @@
                 'fileName': 'song4.mp3',
                 'image' : 'song4.jpg'
             }]
-        var songs2 =[{  'name': 'song1',
-                       'artist': 'Arijit Singh',
-                       'album': 'Ishq Actually',
-                       'duration': '5:42',
-                       'fileName': 'song3.mp3',
-                       'image' : 'song3.jpg'
+        var songs2 =[{  
+                        'name': 'Russian Roulette',
+                       'artist': 'Rihanna',
+                       'album': 'album1',
+                       'duration': '3:47',
+                       'fileName': 'song5.mp3',
+                       'image' : 'song5.jpg'
                 },
                 {    'name': 'song2',
                      'artist': 'song3',
-                     'album': 'Haunted',
+                     'album': 'album2',
                      'duration': '5:07',
                      'fileName': 'song4.mp3',
                      'image' : 'song4.jpg'
                 },
                     {'name': 'song3',
-                'artist': 'Lucky Ali',
+                'artist': 'album3',
                 'album': 'Tamasha',
                 'duration': '4:11',
                 'fileName': 'song1.mp3',
@@ -116,32 +113,192 @@
             {
                 'name': 'song4',
                 'artist': 'Enrique Iglesias',
-                'album': 'Euphoria',
+                'album': 'album4',
                 'duration': '3:38',
                 'fileName': 'song2.mp3',
                 'image' : 'song2.jpg'
             }]
+            // var songs3 =[{  
+            //             'name': 'Russian Roulette',
+            //            'artist': 'Rihanna',
+            //            'album': 'album1',
+            //            'duration': '3:47',
+            //            'fileName': 'song5.mp3',
+            //            'image' : 'song5.jpg'
+            //     },
+            //     {    'name': 'song2',
+            //          'artist': 'song3',
+            //          'album': 'album2',
+            //          'duration': '5:07',
+            //          'fileName': 'song4.mp3',
+            //          'image' : 'song4.jpg'
+            //     },
+            //         {'name': 'song3',
+            //     'artist': 'album3',
+            //     'album': 'Tamasha',
+            //     'duration': '4:11',
+            //     'fileName': 'song1.mp3',
+            //     'image' : 'song1.jpg'
+            // },
+            // {
+            //     'name': 'song4',
+            //     'artist': 'Enrique Iglesias',
+            //     'album': 'album4',
+            //     'duration': '3:38',
+            //     'fileName': 'song2.mp3',
+            //     'image' : 'song2.jpg'
+            // }]
+            // var songs4 =[{  
+            //             'name': 'Russian Roulette',
+            //            'artist': 'Rihanna',
+            //            'album': 'album1',
+            //            'duration': '3:47',
+            //            'fileName': 'song5.mp3',
+            //            'image' : 'song5.jpg'
+            //     },
+            //     {    'name': 'song2',
+            //          'artist': 'song3',
+            //          'album': 'album2',
+            //          'duration': '5:07',
+            //          'fileName': 'song4.mp3',
+            //          'image' : 'song4.jpg'
+            //     },
+            //         {'name': 'song3',
+            //     'artist': 'album3',
+            //     'album': 'Tamasha',
+            //     'duration': '4:11',
+            //     'fileName': 'song1.mp3',
+            //     'image' : 'song1.jpg'
+            // },
+            // {
+            //     'name': 'song4',
+            //     'artist': 'Enrique Iglesias',
+            //     'album': 'album4',
+            //     'duration': '3:38',
+            //     'fileName': 'song2.mp3',
+            //     'image' : 'song2.jpg'
+            // }]
+            // var songs5 =[{  
+            //             'name': 'Russian Roulette',
+            //            'artist': 'Rihanna',
+            //            'album': 'album1',
+            //            'duration': '3:47',
+            //            'fileName': 'song5.mp3',
+            //            'image' : 'song5.jpg'
+            //     },
+            //     {    'name': 'song2',
+            //          'artist': 'song3',
+            //          'album': 'album2',
+            //          'duration': '5:07',
+            //          'fileName': 'song4.mp3',
+            //          'image' : 'song4.jpg'
+            //     },
+            //         {'name': 'song3',
+            //     'artist': 'album3',
+            //     'album': 'Tamasha',
+            //     'duration': '4:11',
+            //     'fileName': 'song1.mp3',
+            //     'image' : 'song1.jpg'
+            // },
+            // {
+            //     'name': 'song4',
+            //     'artist': 'Enrique Iglesias',
+            //     'album': 'album4',
+            //     'duration': '3:38',
+            //     'fileName': 'song2.mp3',
+            //     'image' : 'song2.jpg'
+            // }]
+            // var songs6 =[{  
+            //             'name': 'Russian Roulette',
+            //            'artist': 'Rihanna',
+            //            'album': 'album1',
+            //            'duration': '3:47',
+            //            'fileName': 'song5.mp3',
+            //            'image' : 'song5.jpg'
+            //     },
+            //     {    'name': 'song2',
+            //          'artist': 'song3',
+            //          'album': 'album2',
+            //          'duration': '5:07',
+            //          'fileName': 'song4.mp3',
+            //          'image' : 'song4.jpg'
+            //     },
+            //         {'name': 'song3',
+            //     'artist': 'album3',
+            //     'album': 'Tamasha',
+            //     'duration': '4:11',
+            //     'fileName': 'song1.mp3',
+            //     'image' : 'song1.jpg'
+            // },
+            // {
+            //     'name': 'song4',
+            //     'artist': 'Enrique Iglesias',
+            //     'album': 'album4',
+            //     'duration': '3:38',
+            //     'fileName': 'song2.mp3',
+            //     'image' : 'song2.jpg'
+            // }]
+            // var songs7 =[{  
+            //             'name': 'Russian Roulette',
+            //            'artist': 'Rihanna',
+            //            'album': 'album1',
+            //            'duration': '3:47',
+            //            'fileName': 'song5.mp3',
+            //            'image' : 'song5.jpg'
+            //     },
+            //     {    'name': 'song2',
+            //          'artist': 'song3',
+            //          'album': 'album2',
+            //          'duration': '5:07',
+            //          'fileName': 'song4.mp3',
+            //          'image' : 'song4.jpg'
+            //     },
+            //         {'name': 'song3',
+            //     'artist': 'album3',
+            //     'album': 'Tamasha',
+            //     'duration': '4:11',
+            //     'fileName': 'song1.mp3',
+            //     'image' : 'song1.jpg'
+            // },
+            // {
+            //     'name': 'song4',
+            //     'artist': 'Enrique Iglesias',
+            //     'album': 'album4',
+            //     'duration': '3:38',
+            //     'fileName': 'song2.mp3',
+            //     'image' : 'song2.jpg'
+            // }]
+            // var songs8 =[{  
+            //             'name': 'Russian Roulette',
+            //            'artist': 'Rihanna',
+            //            'album': 'album1',
+            //            'duration': '3:47',
+            //            'fileName': 'song5.mp3',
+            //            'image' : 'song5.jpg'
+            //     },
+            //     {    'name': 'song2',
+            //          'artist': 'song3',
+            //          'album': 'album2',
+            //          'duration': '5:07',
+            //          'fileName': 'song4.mp3',
+            //          'image' : 'song4.jpg'
+            //     },
+            //         {'name': 'song3',
+            //     'artist': 'album3',
+            //     'album': 'Tamasha',
+            //     'duration': '4:11',
+            //     'fileName': 'song1.mp3',
+            //     'image' : 'song1.jpg'
+            // },
+            // {
+            //     'name': 'song4',
+            //     'artist': 'Enrique Iglesias',
+            //     'album': 'album4',
+            //     'duration': '3:38',
+            //     'fileName': 'song2.mp3',
+            //     'image' : 'song2.jpg'
+            // }]
 
-        // var mood2=document.querySelector('.mood2');
-        // mood2.addEventListener('click',function(){
-        //     splfunction();
-        // });
-        // function splfunction(){
-        //     changeCurrentSongDetails(songs2[0]);
-        //     // var song = document.querySelector('audio');
-        //     // song.src=songs2[0].fileName;
-        //     for(var i =0; i < songs2.length;i++) {
-        //             //using the songs object to fill in all the details
-        //         var obj = songs2[i];
-        //         var name = '#song' + (i+1);
-        //         var song = $(name);
-        //         song.find('.song-name').text(obj.name);
-        //         song.find('.song-artist').text(obj.artist);
-        //         song.find('.song-album').text(obj.album);
-        //         song.find('.song-length').text(obj.duration);
-        //         addSongNameClickEvent(obj,i+1)
-        //     }
-        // }
 
         function fancyTimeFormat(time)
         {   
@@ -228,13 +385,14 @@
             var songName = songObj.fileName;
             $(id).click(function() {
                 var audio = document.querySelector('audio');
-                var currentSong = audio.src;
+                //var currentSong = audio.src;
                 if(songNumber !== position)//if the requested song and the running song r not same
                 {
                     audio.src = songName;
                     songNumber = position;
                     changeCurrentSongDetails(songObj);
                 }
+
                 toggleSong();
             });
         }
@@ -242,10 +400,10 @@
         
         //does the stipulated functions after the window is loaded
         window.onload = function() {
-            changeCurrentSongDetails(songs[0]);
-            for(var i =0; i < songs.length;i++) {
+            changeCurrentSongDetails(songs1[0]);
+            for(var i =0; i < songs1.length;i++) {
                     //using the songs object to fill in all the details
-                var obj = songs[i];
+                var obj = songs1[i];
                 var name = '#song' + (i+1);
                 var song = $(name);
                 song.find('.song-name').text(obj.name);
@@ -368,10 +526,119 @@ $('#see-playlist').on('click',function(){
 $('#see-moodlist').on('click',function(){
     $('#home-content').addClass('hidden');
     $('#songs_wrapper').addClass('hidden');
-    $('#mood-list').removeClass('hidden');
-
+    $('#mood-list').removeClass('hidden')
 })
+$('.mood').on('click',function(){
+    $('.main header').removeClass('header1').addClass('header2')
+    $('#mood-list').addClass('hidden')
+    $('#songs_wrapper').removeClass('hidden')
+    $('#songs').removeClass('hidden')
+})
+$('.mood1').on('click',function(){
+    $('#home-content').removeClass('hidden').addClass('home1')
+    $('.main').removeClass('main2')
+    $('.main').removeClass('main3')
+    $('.main').removeClass('main4')
+    $('.main').removeClass('main5')
+    $('.main').removeClass('main6')
+    $('.main').removeClass('main7')
+    $('.main').removeClass('main8')
+    $('.main').addClass('main1')
+})
+$('.mood2').on('click',function(){
+    $('#home-content').removeClass('hidden').addClass('home1')
+    $('.main').removeClass('main1')
+    $('.main').removeClass('main3')
+    $('.main').removeClass('main4')
+    $('.main').removeClass('main5')
+    $('.main').removeClass('main6')
+    $('.main').removeClass('main7')
+    $('.main').removeClass('main8')
+    $('.main').addClass('main2')
+})
+$('.mood3').on('click',function(){
+    $('#home-content').removeClass('hidden').addClass('home1')
+    $('.main').removeClass('main2')
+    $('.main').removeClass('main1')
+    $('.main').removeClass('main4')
+    $('.main').removeClass('main5')
+    $('.main').removeClass('main6')
+    $('.main').removeClass('main7')
+    $('.main').removeClass('main8')
+    $('.main').addClass('main3')
+})
+$('.mood4').on('click',function(){
+    $('#home-content').removeClass('hidden').addClass('home1')
+    $('.main').removeClass('main1')
+    $('.main').removeClass('main3')
+    $('.main').removeClass('main2')
+    $('.main').removeClass('main5')
+    $('.main').removeClass('main6')
+    $('.main').removeClass('main7')
+    $('.main').removeClass('main8')
+    $('.main').addClass('main4')
+})
+$('.mood5').on('click',function(){
+    $('#home-content').removeClass('hidden').addClass('home1')
+    $('.main').removeClass('main2')
+    $('.main').removeClass('main3')
+    $('.main').removeClass('main4')
+    $('.main').removeClass('main1')
+    $('.main').removeClass('main6')
+    $('.main').removeClass('main7')
+    $('.main').removeClass('main8')
+    $('.main').addClass('main5')
+})
+$('.mood6').on('click',function(){
+    $('#home-content').removeClass('hidden').addClass('home1')
+    $('.main').removeClass('main1')
+    $('.main').removeClass('main3')
+    $('.main').removeClass('main4')
+    $('.main').removeClass('main5')
+    $('.main').removeClass('main2')
+    $('.main').removeClass('main7')
+    $('.main').removeClass('main8')
+    $('.main').addClass('main6')
+})
+$('.mood7').on('click',function(){
+    $('#home-content').removeClass('hidden').addClass('home1')
+    $('.main').removeClass('main2')
+    $('.main').removeClass('main3')
+    $('.main').removeClass('main4')
+    $('.main').removeClass('main5')
+    $('.main').removeClass('main6')
+    $('.main').removeClass('main1')
+    $('.main').removeClass('main8')
+    $('.main').addClass('main7')
+})
+$('.mood8').on('click',function(){
+    $('#home-content').removeClass('hidden').addClass('home1')
+    $('.main').removeClass('main1')
+    $('.main').removeClass('main3')
+    $('.main').removeClass('main4')
+    $('.main').removeClass('main5')
+    $('.main').removeClass('main6')
+    $('.main').removeClass('main7')
+    $('.main').removeClass('main2')
+    $('.main').addClass('main8')
+})
+var mood2=document.querySelector('.mood2');
+        mood2.addEventListener('click',function(){
+            songNumber=5;
+            splfunction();
+});
 
-// $('.mood').on('click',function(){
-//             $('#mood-list').addClass('hidden')
-//        });
+function splfunction(){
+        changeCurrentSongDetails(songs2[0]);
+        for(var i =0; i < songs2.length;i++) {
+        //using the songs object to fill in all the details
+            var obj = songs2[i];
+            var name = '#song' + (i+1);
+            var song = $(name);
+            song.find('.song-name').text(obj.name);
+            song.find('.song-artist').text(obj.artist);
+            song.find('.song-album').text(obj.album);
+            song.find('.song-length').text(obj.duration);
+            addSongNameClickEvent(obj,i+1)
+        }
+}
