@@ -27,7 +27,7 @@ html,body{
 	margin: 0px;
 	margin-bottom: 2px;
 }
-form{
+#form{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -42,13 +42,15 @@ form{
     width: 250px;
     border-radius: 10px;
     padding-left: 8px;
-    border:1px solid orange;
     font-size: 16px;
+}
+.name-inp{
+    border:2px solid orange;
 }
 #name-input:focus{
 	outline:none;
 }
-#password-input{
+/*#password-input{
     height: 35px;
     width: 250px;
     border-radius: 10px;
@@ -59,7 +61,7 @@ form{
 }
 #password-input:focus{
     outline:none;
-}
+}*/
 #go-button{
     padding: 5px;
     height: 35px;
@@ -72,6 +74,7 @@ form{
     border:1px solid white;
     outline-width: 1px;
     margin-top: 20px;
+    cursor: pointer;
 }
 .main {
     width: 100%;
@@ -106,6 +109,7 @@ form{
 }
 
 .main footer {
+    border-top:1px solid white;
     height: 80px;
     background-color: #282828;
     padding-top: 1rem;
@@ -131,13 +135,15 @@ header .brand h1{
 }
 .right.floated {
     float: right;
+    font-size: 1.2rem;
 }
 
 .clickable {
     cursor: pointer;
 }
 .error {
-    border: 3px solid red;
+    border: 2px solid red;
+    outline-color: red;
 }
 .play-icon{
 	color: white;
@@ -156,11 +162,6 @@ header .brand h1{
 .inactive{
     color: #aaa;
 }
-/*.interactive-pane{
-    position: absolute;
-    right: 0;
-    margin-right: 30px;
-}*/
 .progress-wrapper {
     margin-top: 0.3rem;
     display: flex;
@@ -193,8 +194,6 @@ header .brand h1{
 .main .content {
     width:850px;
     margin: 0px auto;
-   /* padding-left:30px;
-    padding-right:30px;*/
 }
 
 .list-headers {
@@ -217,14 +216,15 @@ header .brand h1{
 
 .song {
     padding-top: 0.5rem;
-   /* padding-bottom: 0.5rem;*/
-    border-bottom: 1px solid rgba(255,255,255,0.5);
     min-height: 30px;
     cursor: pointer;
 }
 
 .song > td{
-    width: 330px;
+    width: 360px;
+}
+.song > td:last-child{
+    width: 150px;
 }
 
 .song .song-duration {
@@ -234,9 +234,6 @@ header .brand h1{
 .song-length {
     text-align: right;
 }
-/*.content {
-    position: relative;
-}*/
 .current-song-wrapper {
     position: absolute;
     bottom: 0;
@@ -290,7 +287,7 @@ table.dataTable tbody tr:hover{
     margin-bottom: 1rem;
     font-size: 16px;
 }
-
+/*volume ka location setting*/
 .responsive-pane{
     position: absolute;
     right: 0;
@@ -341,13 +338,7 @@ input[type=range]{
 .option-list li:hover{
     border-bottom: 2px solid orange;
 }
-/*css for home*/
-/*#home-content{
-    width: 100%;
-    height: 400px;
-    margin-top: 20px;
-    background-color: grey;
-}*/
+
 .header2{
     height: 60px;
     background-color: none;
@@ -423,7 +414,7 @@ input[type=range]{
     background-position: center;
     background-size: cover;
 }
-
+/*Additional classes jo js se add krte h*/
 .main1{
 background-image: url(Img/loop.gif);
 background-position: center;
@@ -433,7 +424,6 @@ background-image: url(Img/staystrong.jpg);
 background-position: center;
 background-size: cover;
 font-family: 'Boogaloo', cursive;
-font-size: 1.2rem;
 }.main3{
 background-image: url(Img/romantic1.gif);
 background-position: center;
@@ -443,8 +433,8 @@ font-weight: normal;
 }.main4{
 background-image: url(Img/roadtrip1.jpg);
 background-position: center;
-font-family: cursive;
 background-size: cover;
+font-family: 'Fresca', sans-serif;
 }
 .main5{
 background-image: url(Img/pop1.jpg);
@@ -452,6 +442,8 @@ background-position: center;
 background-size: cover;
 }.main6{
 background-image: url(Img/jazz.jpg);
+background-position: center;
+background-size: cover;
 }.main7{
 background-image: url(Img/retro.jpg);
 background-position: center;
@@ -462,23 +454,7 @@ background-image: url(Img/edm2.jpg);
 background-position: center;
 background-size: cover;
 }
-.home1{
-    background-color: white;
-}.home2{
-    background-color: blue;
-}.home3{
-    background-color: green;
-}.home4{
-    background-color: grey;
-}.home5{
-    background-color: red;
-}.home6{
-    background-color: orange;
-}.home7{
-    background-color: yellow;
-}.home8{
-    background-color: pink;
-}
+/*Mobile responsive banane k liye*/
 @media screen and (max-width: 1200px){
     .current-song-wrapper {
         position: fixed;

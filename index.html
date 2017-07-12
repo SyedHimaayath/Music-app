@@ -5,46 +5,45 @@
     <link rel="stylesheet" type="text/css" href="font-awesome.css"> 
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
 	<link rel="stylesheet" type="text/css" href="main.css">
-	<link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Boogaloo" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Audiowide&effect=shadow-multiple" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Jura|Boogaloo|Courgette|Aldrich|Fresca" rel="stylesheet">
+    <!-- saare required fonts ko ek hi api call se bula liya -->
 </head>
 <body>
 	<div class="wrapper ">
-		<section class="cover hidden">
-				<h1>Songify</h1><span class="brand-ext">the music box</span>
-				<h2> Enter name to access your account </h2>
-                <form>
-                <input type="name" placeholder="test@acadview.com" id="name-input">
+		<section class="cover">
+            <!-- font-effect-shadow-multiple title ke effect k liye lagaya h -->
+            <!-- takes the required effect from google font api -->
+				<h1 class="font-effect-shadow-multiple">Songify</h1><span class="brand-ext">the music box</span>
+				<h2> Enter name to access your account </h2><div>
+                <div>
+                    <input type="text" placeholder="Name" id="name-input" class="name-inp">
+                    <button type="submit" id="go-button"> Go </button>
+                </div>
+                <!-- <div id="form">
+                <input type="text" placeholder="test@acadview.com" id="name-input">
                 <input type="password" placeholder="JavascriptRocks" id="password-input">
                 <button type="submit" id="go-button"> Go </button>
-                </form>
+                </div> -->
 		</section>
-			<div class="main">
+			<div class="main hidden">
 		        <header class="header1 "> 
     		        <div class="left floated brand"><h1>Songify</h1><span class="brand-ext">the music box</span></div>
-    		        <div class="right floated user-name">  </div> 
+    		        <div class="right floated user-name"></div> 
                 </header>
 
                 <div class="top-content">
+                <!-- hamara Navbar jaisa menu-->
                 <ul class="option-list">
                     <li id="see-home">Home</li>
                     <li id="see-playlist">Playlist</li>
                     <li id="see-moodlist">Mood list</li>
-                    <li>Languages</li>
+                    <li>Languages</li><!--Sirf site ko good-looking banane k liye-->
                     <li>History</li>
                     </ul>
                 </div>
 		        <section class="content">
 		        <audio src="song1.mp3"></audio>
-
-                <!-- Home Content build start -->
-                    <div class="" id="home-content">
-
-                    </div>
-                <!-- Home Content build end -->
                 
                 <!--Mood-list building starts-->
                 <div class="hidden" id="mood-list">
@@ -60,7 +59,7 @@
 
                         <li><div class="mood mood5"><span>Pop</span></div></li>
 
-                        <li><div class="mood mood6"><span>Jazz</span></div></li>
+                        <li><div class="mood mood6"><span>Casual</span></div></li>
 
                         <li><div class="mood mood7"><span>Retro World</span></div></li>
 

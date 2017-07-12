@@ -1,18 +1,20 @@
         $('.cover button').on('click', function() {
             var name = $('#name-input').val();
-            var pass = $('#password-input').val();
-            if(name == "test@acadview.com" && pass == "JavascriptRocks")//user gets access only if username input value is greater than or equal to 2 
+            //var pass = $('#password-input').val();//password ki string check krne k liye
+            //if(name === "test@acadview.com" && pass === "JavascriptRocks")//Check kiya ki strings equal hai ya nhi
+            if(name.length > 3)//user gets access only if username input value is greater than or equal to 2 
             {
-                //var message = "Welcome, " + name;
-                //$('.main .user-name').text(message);
+
+                var message = "Welcome, " + name;
+                $('.main .user-name').text(message);
                 $('.cover').addClass('hidden');
                 $('.main').removeClass('hidden');
             }
             else
             {
-                $('#name-input').addClass('error');
-                $('#password-input').addClass('error');
-                alert("Username should be more than 3 chars");
+                $('#name-input').removeClass('name-inp').addClass('error');
+                //$('#password-input').addClass('error');
+                alert("ERROR!!\nUsername should have more than 3 characters");
             }
         });
 
@@ -33,13 +35,6 @@
             }
         }
 
-        function stepForward(){
-            //code (mandatory)
-        }
-        function stepbackward(){
-            //code (mandatory)
-        }
-
         $('.play-icon').on('click', function() {
             toggleSong();
         });
@@ -53,14 +48,15 @@
             }
         });
         
+    
         //made an object and stored the complete info about all the songs
         //var allSongs=[songs1,songs2]//,songs3,songs4,songs5,songs6,songs7,songs8];
         //songs=[0,1,2,3];
         var songs = [{
-                'name': 'Aye Dil Bata',
-                'artist': 'Arijit Singh',
-                'album': 'Ishq Actually',
-                'duration': '5:42',
+                'name': 'Buddhu Sa Mann Hai',
+                'artist': 'Amaal Malik, Armaan Malik',
+                'album': 'Kapoor & Sons',
+                'duration': '3:26',
                'fileName': 'song1.mp3',
                'image' : 'song1.jpg'
             },
@@ -88,36 +84,378 @@
                 'fileName': 'song4.mp3',
                 'image' : 'song4.jpg'
             }]
-        var songs2 =[{  
-                        'name': 'Russian Roulette',
-                       'artist': 'Rihanna',
-                       'album': 'album1',
-                       'duration': '3:47',
+        var mood1=document.querySelector('.mood1');
+        mood1.addEventListener('click',function(){
+            $('.main').removeClass('main2')
+            $('.main').removeClass('main3')
+            $('.main').removeClass('main4')
+            $('.main').removeClass('main5')
+            $('.main').removeClass('main6')
+            $('.main').removeClass('main7')
+            $('.main').removeClass('main8')
+            $('.main').addClass('main1')
+        songs = songs1 = [{
+                'name': 'Buddhu Sa Mann Hai',
+                'artist': 'Amaal Malik, Armaan Malik',
+                'album': 'Kapoor & Sons',
+                'duration': '3:26',
+               'fileName': 'song1.mp3',
+               'image' : 'song1.jpg'
+            },
+            {
+                'name': 'Jaaniya O Jaaniya',
+                'artist': 'Sidharth Basrur',
+                'album': 'Haunted',
+                'duration': '5:07',
+                'fileName': 'song2.mp3',
+                'image' : 'song2.jpg'
+            },
+            {
+                'name': 'Safarnama',
+                'artist': 'Lucky Ali',
+                'album': 'Tamasha',
+                'duration': '4:11',
+                'fileName': 'song3.mp3',
+                'image' : 'song3.jpg'
+            },
+            {
+                'name': 'Why Not Me',
+                'artist': 'Enrique Iglesias',
+                'album': 'Euphoria',
+                'duration': '3:38',
+                'fileName': 'song4.mp3',
+                'image' : 'song4.jpg'
+            }]
+            var audio =document.querySelector('audio')
+            audio.src=songs1[0].fileName
+            toggleSong();
+            splfunction();
+        });
+        var mood2=document.querySelector('.mood2');
+        mood2.addEventListener('click',function(){
+            $('.main').removeClass('main1')
+            $('.main').removeClass('main3')
+            $('.main').removeClass('main4')
+            $('.main').removeClass('main5')
+            $('.main').removeClass('main6')
+            $('.main').removeClass('main7')
+            $('.main').removeClass('main8')
+            $('.main').addClass('main2')
+        songs = songs2 =[{  
+                        'name': 'Channa Mereya',
+                       'artist': 'Arijit Singh',
+                       'album': 'Ae Dil Hai Mushkil',
+                       'duration': '4:49',
                        'fileName': 'song5.mp3',
                        'image' : 'song5.jpg'
                 },
-                {    'name': 'song2',
-                     'artist': 'song3',
-                     'album': 'album2',
-                     'duration': '5:07',
-                     'fileName': 'song4.mp3',
-                     'image' : 'song4.jpg'
+                {    'name': 'Phir Bhi Tumko Chahunga',
+                     'artist': 'Arijit Singh',
+                     'album': 'Half Girlfriend',
+                     'duration': '5:51',
+                     'fileName': 'song6.mp3',
+                     'image' : 'song6.jpg'
                 },
-                    {'name': 'song3',
-                'artist': 'album3',
-                'album': 'Tamasha',
-                'duration': '4:11',
-                'fileName': 'song1.mp3',
-                'image' : 'song1.jpg'
+                    {'name': 'Dhuaan Dhuaan',
+                'artist': 'Arijit Singh',
+                'album': 'Fugly',
+                'duration': '3:40',
+                'fileName': 'song7.mp3',
+                'image' : 'song7.jpg'
             },
             {
-                'name': 'song4',
-                'artist': 'Enrique Iglesias',
-                'album': 'album4',
-                'duration': '3:38',
-                'fileName': 'song2.mp3',
-                'image' : 'song2.jpg'
+                'name': 'Saathi Rey',
+                'artist': 'Arko',
+                'album': 'Kapoor & Sons',
+                'duration': '4:32',
+                'fileName': 'song8.mp3',
+                'image' : 'song8.jpg'
             }]
+            var audio =document.querySelector('audio')
+            audio.src=songs2[0].fileName
+            toggleSong();
+            splfunction();
+        });
+        var mood3=document.querySelector('.mood3');
+        mood3.addEventListener('click',function(){
+            $('.main').removeClass('main2')
+            $('.main').removeClass('main1')
+            $('.main').removeClass('main4')
+            $('.main').removeClass('main5')
+            $('.main').removeClass('main6')
+            $('.main').removeClass('main7')
+            $('.main').removeClass('main8')
+            $('.main').addClass('main3')
+        songs = songs3 =[{  'name': 'Darkhaast',
+                       'artist': 'Arijit Singh,Sunidhi Chouhan',
+                       'album': 'Shivaay',
+                       'duration': '6:14',
+                       'fileName': 'song9.mp3',
+                       'image' : 'song9.jpg'
+                },
+                {    'name': 'Mera Pehla Pehle Pyaar',
+                     'artist': '--',
+                     'album': 'Mera Pehla Pehle Pyaar',
+                     'duration': '4:31',
+                     'fileName': 'song10.mp3',
+                     'image' : 'song10.jpg'
+                },
+                    {'name': 'Aye Dil Bata',
+                'artist': 'Arijit Singh',
+                'album': 'Ishq Actually',
+                'duration': '5:42',
+                'fileName': 'song11.mp3',
+                'image' : 'song11.jpg'
+            },
+            {
+                'name': 'Saathi Rey',
+                'artist': 'Arko',
+                'album': 'Kapoor & Sons',
+                'duration': '4:32',
+                'fileName': 'song8.mp3',
+                'image' : 'song8.jpg'
+            }]    
+            var audio =document.querySelector('audio')
+            audio.src=songs3[0].fileName
+            toggleSong();
+            splfunction();
+        });
+        var mood4=document.querySelector('.mood4');
+        mood4.addEventListener('click',function(){
+            $('.main').removeClass('main1')
+            $('.main').removeClass('main3')
+            $('.main').removeClass('main2')
+            $('.main').removeClass('main5')
+            $('.main').removeClass('main6')
+            $('.main').removeClass('main7')
+            $('.main').removeClass('main8')
+            $('.main').addClass('main4')
+        songs = songs4 =[{
+                'name': 'Safarnama',
+                'artist': 'Lucky Ali',
+                'album': 'Tamasha',
+                'duration': '4:11',
+                'fileName': 'song3.mp3',
+                'image' : 'song3.jpg'
+            },
+                {  'name': 'Darkhaast',
+                       'artist': 'Arijit Singh,Sunidhi Chouhan',
+                       'album': 'Shivaay',
+                       'duration': '6:14',
+                       'fileName': 'song9.mp3',
+                       'image' : 'song9.jpg'
+                },
+                    {'name': 'Aye Dil Bata',
+                'artist': 'Arijit Singh',
+                'album': 'Ishq Actually',
+                'duration': '5:42',
+                'fileName': 'song11.mp3',
+                'image' : 'song11.jpg'
+            },
+            {
+                'name': 'Saathi Rey',
+                'artist': 'Arko',
+                'album': 'Kapoor & Sons',
+                'duration': '4:32',
+                'fileName': 'song8.mp3',
+                'image' : 'song8.jpg'
+            }]    
+            var audio =document.querySelector('audio')
+            audio.src=songs4[0].fileName
+            toggleSong();
+            splfunction();
+        });
+        var mood5=document.querySelector('.mood5');
+        mood5.addEventListener('click',function(){
+            $('.main').removeClass('main2')
+            $('.main').removeClass('main3')
+            $('.main').removeClass('main4')
+            $('.main').removeClass('main1')
+            $('.main').removeClass('main6')
+            $('.main').removeClass('main7')
+            $('.main').removeClass('main8')
+            $('.main').addClass('main5')
+        songs = songs5 =[{  'name': 'Russian Roulette',
+                       'artist': 'Rihanna',
+                       'album': 'Loud',
+                       'duration': '3:47',
+                       'fileName': 'song17.mp3',
+                       'image' : 'song17.jpg'
+                },
+                {    'name': 'Rockabye Baby',
+                     'artist': 'Clean Bandit',
+                     'album': 'Rockabye',
+                     'duration': '4:13',
+                     'fileName': 'song18.mp3',
+                     'image' : 'song18.jpg'
+                },
+                    {'name': 'FireWorks',
+                'artist': 'Katy Perry',
+                'album': 'Teenage Dream',
+                'duration': '3:53',
+                'fileName': 'song19.mp3',
+                'image' : 'song19.jpg'
+            },
+            {'name': 'Despacito (TEGOS.RU)',
+                'artist': 'Louis Fonsi, Daddy Yankee',
+                'album': 'TEGOS.RU',
+                'duration': '3:47',
+                'fileName': 'song20.mp3',
+                'image' : 'song20.jpeg'    
+            }]    
+            var audio =document.querySelector('audio')
+            audio.src=songs5[0].fileName
+            toggleSong();
+            splfunction();
+        });
+        var mood6=document.querySelector('.mood6');
+        mood6.addEventListener('click',function(){
+            $('.main').removeClass('main1')
+            $('.main').removeClass('main3')
+            $('.main').removeClass('main4')
+            $('.main').removeClass('main5')
+            $('.main').removeClass('main2')
+            $('.main').removeClass('main7')
+            $('.main').removeClass('main8')
+            $('.main').addClass('main6')
+        songs = songs6 =[{
+                'name': 'Safarnama',
+                'artist': 'Lucky Ali',
+                'album': 'Tamasha',
+                'duration': '4:11',
+                'fileName': 'song3.mp3',
+                'image' : 'song3.jpg'
+            },
+                {
+                'name': 'Why Not Me',
+                'artist': 'Enrique Iglesias',
+                'album': 'Euphoria',
+                'duration': '3:38',
+                'fileName': 'song4.mp3',
+                'image' : 'song4.jpg'
+            },
+                    {'name': 'Aye Dil Bata',
+                'artist': 'Arijit Singh',
+                'album': 'Ishq Actually',
+                'duration': '5:42',
+                'fileName': 'song11.mp3',
+                'image' : 'song11.jpg'
+            },
+            {
+                'name': 'Saathi Rey',
+                'artist': 'Arko',
+                'album': 'Kapoor & Sons',
+                'duration': '4:32',
+                'fileName': 'song8.mp3',
+                'image' : 'song8.jpg'
+            }]    
+            var audio =document.querySelector('audio')
+            audio.src=songs6[0].fileName
+            toggleSong();
+            splfunction();
+        });
+        var mood7=document.querySelector('.mood7');
+        mood7.addEventListener('click',function(){
+            $('.main').removeClass('main2')
+            $('.main').removeClass('main3')
+            $('.main').removeClass('main4')
+            $('.main').removeClass('main5')
+            $('.main').removeClass('main6')
+            $('.main').removeClass('main1')
+            $('.main').removeClass('main8')
+            $('.main').addClass('main7')
+        songs = songs7 =[{  'name': 'Mera Dil Bhi Kitna Pagal Hai',
+                       'artist': 'Kumar Sanu,Alka Yagnik',
+                       'album': 'Saajan',
+                       'duration': '5:26',
+                       'fileName': 'song25.mp3',
+                       'image' : 'song25.jpg'
+                },
+                {    'name': 'Mera Pehla Pehle Pyaar',
+                     'artist': '--',
+                     'album': 'Mera Pehla Pehle Pyaar',
+                     'duration': '4:31',
+                     'fileName': 'song10.mp3',
+                     'image' : 'song10.jpg'
+                },
+                    {  'name': 'Mera Dil Bhi Kitna Pagal Hai',
+                       'artist': 'Kumar Sanu,Alka Yagnik',
+                       'album': 'Saajan',
+                       'duration': '5:26',
+                       'fileName': 'song25.mp3',
+                       'image' : 'song25.jpg'
+                },
+            {
+                'name': 'Saathi Rey',
+                'artist': 'Arko',
+                'album': 'Kapoor & Sons',
+                'duration': '4:32',
+                'fileName': 'song8.mp3',
+                'image' : 'song8.jpg'
+            }]    
+            var audio =document.querySelector('audio')
+            audio.src=songs7[0].fileName
+            toggleSong();
+            splfunction();
+        });
+        var mood8=document.querySelector('.mood8');
+        mood8.addEventListener('click',function(){
+            $('.main').removeClass('main1')
+            $('.main').removeClass('main3')
+            $('.main').removeClass('main4')
+            $('.main').removeClass('main5')
+            $('.main').removeClass('main6')
+            $('.main').removeClass('main7')
+            $('.main').removeClass('main2')
+            $('.main').addClass('main8')
+        songs = songs8 =[{  'name': 'Titanium feat. Sia',
+                       'artist': 'David Guetta, Sia',
+                       'album': 'Nothing But the Beat',
+                       'duration': '4:05',
+                       'fileName': 'song29.mp3',
+                       'image' : 'song29.jpg'
+                },
+                {    'name': 'Get Low',
+                     'artist': 'Dillon Francis, DJ Snake',
+                     'album': 'Get Low',
+                     'duration': '3:34',
+                     'fileName': 'song30.mp3',
+                     'image' : 'song30.jpg'
+                },
+                   {  'name': 'Titanium feat. Sia',
+                       'artist': 'David Guetta, Sia',
+                       'album': 'Nothing But the Beat',
+                       'duration': '4:05',
+                       'fileName': 'song29.mp3',
+                       'image' : 'song29.jpg'
+                },
+                {    'name': 'Get Low',
+                     'artist': 'Dillon Francis, DJ Snake',
+                     'album': 'Get Low',
+                     'duration': '3:34',
+                     'fileName': 'song30.mp3',
+                     'image' : 'song30.jpg'
+                }]    
+            var audio =document.querySelector('audio')
+            audio.src=songs8[0].fileName
+            toggleSong();
+            splfunction();
+        });
+        //playlists change krta h
+        function splfunction(){
+                changeCurrentSongDetails(songs[0]);
+                for(var i =0; i < songs.length;i++) {
+                //using the songs object to fill in all the details
+                    var obj = songs[i];
+                    var name = '#song' + (i+1);
+                    var song = $(name);
+                    song.find('.song-name').text(obj.name);
+                    song.find('.song-artist').text(obj.artist);
+                    song.find('.song-album').text(obj.album);
+                    song.find('.song-length').text(obj.duration);
+                    addSongNameClickEvent(obj,i+1)
+                }
+        }
 
         function fancyTimeFormat(time)
         {   
@@ -204,7 +542,7 @@
             var songName = songObj.fileName;
             $(id).click(function() {
                 var audio = document.querySelector('audio');
-                //var currentSong = audio.src;
+                var currentSong = audio.src;
                 if(songNumber !== position)//if the requested song and the running song r not same
                 {
                     audio.src = songName;
@@ -220,21 +558,10 @@
         //does the stipulated functions after the window is loaded
         window.onload = function() {
             changeCurrentSongDetails(songs[0]);
-            for(var i =0; i < songs.length;i++) {
-                    //using the songs object to fill in all the details
-                var obj = songs[i];
-                var name = '#song' + (i+1);
-                var song = $(name);
-                song.find('.song-name').text(obj.name);
-                song.find('.song-artist').text(obj.artist);
-                song.find('.song-album').text(obj.album);
-                song.find('.song-length').text(obj.duration);
-                addSongNameClickEvent(obj,i+1)
-            }
+            splfunction();//sare playlist ke details ko apne apne element me insert krta hai
             $('#songs').DataTable({
                 paging : false//removed unnecessary pagination
             });
-            $('#songs_wrapper').addClass('hidden');
 
             //checks and changes the time for every 1 second
             updateCurrentTime();
@@ -353,110 +680,3 @@ $('.mood').on('click',function(){
     $('#songs_wrapper').removeClass('hidden')
     $('#songs').removeClass('hidden')
 })
-$('.mood1').on('click',function(){
-    $('#home-content').removeClass('hidden').addClass('home1')
-    $('.main').removeClass('main2')
-    $('.main').removeClass('main3')
-    $('.main').removeClass('main4')
-    $('.main').removeClass('main5')
-    $('.main').removeClass('main6')
-    $('.main').removeClass('main7')
-    $('.main').removeClass('main8')
-    $('.main').addClass('main1')
-})
-$('.mood2').on('click',function(){
-    $('#home-content').removeClass('hidden').addClass('home1')
-    $('.main').removeClass('main1')
-    $('.main').removeClass('main3')
-    $('.main').removeClass('main4')
-    $('.main').removeClass('main5')
-    $('.main').removeClass('main6')
-    $('.main').removeClass('main7')
-    $('.main').removeClass('main8')
-    $('.main').addClass('main2')
-})
-$('.mood3').on('click',function(){
-    $('#home-content').removeClass('hidden').addClass('home1')
-    $('.main').removeClass('main2')
-    $('.main').removeClass('main1')
-    $('.main').removeClass('main4')
-    $('.main').removeClass('main5')
-    $('.main').removeClass('main6')
-    $('.main').removeClass('main7')
-    $('.main').removeClass('main8')
-    $('.main').addClass('main3')
-})
-$('.mood4').on('click',function(){
-    $('#home-content').removeClass('hidden').addClass('home1')
-    $('.main').removeClass('main1')
-    $('.main').removeClass('main3')
-    $('.main').removeClass('main2')
-    $('.main').removeClass('main5')
-    $('.main').removeClass('main6')
-    $('.main').removeClass('main7')
-    $('.main').removeClass('main8')
-    $('.main').addClass('main4')
-})
-$('.mood5').on('click',function(){
-    $('#home-content').removeClass('hidden').addClass('home1')
-    $('.main').removeClass('main2')
-    $('.main').removeClass('main3')
-    $('.main').removeClass('main4')
-    $('.main').removeClass('main1')
-    $('.main').removeClass('main6')
-    $('.main').removeClass('main7')
-    $('.main').removeClass('main8')
-    $('.main').addClass('main5')
-})
-$('.mood6').on('click',function(){
-    $('#home-content').removeClass('hidden').addClass('home1')
-    $('.main').removeClass('main1')
-    $('.main').removeClass('main3')
-    $('.main').removeClass('main4')
-    $('.main').removeClass('main5')
-    $('.main').removeClass('main2')
-    $('.main').removeClass('main7')
-    $('.main').removeClass('main8')
-    $('.main').addClass('main6')
-})
-$('.mood7').on('click',function(){
-    $('#home-content').removeClass('hidden').addClass('home1')
-    $('.main').removeClass('main2')
-    $('.main').removeClass('main3')
-    $('.main').removeClass('main4')
-    $('.main').removeClass('main5')
-    $('.main').removeClass('main6')
-    $('.main').removeClass('main1')
-    $('.main').removeClass('main8')
-    $('.main').addClass('main7')
-})
-$('.mood8').on('click',function(){
-    $('#home-content').removeClass('hidden').addClass('home1')
-    $('.main').removeClass('main1')
-    $('.main').removeClass('main3')
-    $('.main').removeClass('main4')
-    $('.main').removeClass('main5')
-    $('.main').removeClass('main6')
-    $('.main').removeClass('main7')
-    $('.main').removeClass('main2')
-    $('.main').addClass('main8')
-})
-var mood2=document.querySelector('.mood2');
-        mood2.addEventListener('click',function(){
-            splfunction();
-});
-
-function splfunction(){
-        changeCurrentSongDetails(songs2[0]);
-        for(var i =0; i < songs2.length;i++) {
-        //using the songs object to fill in all the details
-            var obj = songs2[i];
-            var name = '#song' + (i+1);
-            var song = $(name);
-            song.find('.song-name').text(obj.name);
-            song.find('.song-artist').text(obj.artist);
-            song.find('.song-album').text(obj.album);
-            song.find('.song-length').text(obj.duration);
-            addSongNameClickEvent(obj,i+1)
-        }
-}
