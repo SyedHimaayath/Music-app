@@ -27,6 +27,9 @@ html,body{
 	margin: 0px;
 	margin-bottom: 2px;
 }
+.cover h2{
+    color: grey;
+}
 #form{
     display: flex;
     flex-direction: column;
