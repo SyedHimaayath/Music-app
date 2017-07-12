@@ -548,21 +548,24 @@
 
         var songNumber = 1;
 
-        function addSongNameClickEvent(songObj,position) {//passing object instead of just some specified value
-            var id = '#song' + position;
-            var songName = songObj.fileName;
-            $(id).click(function() {
-                var audio = document.querySelector('audio');
-                var currentSong = audio.src;
-                if(songNumber !== position)//if the requested song and the running song r not same
-                {
-                    audio.src = songName;
-                    songNumber = position;
-                    changeCurrentSongDetails(songObj);
-                }
+        function addSongNameClickEvent(songObj, position) //we have made a machine jispe 2 buttons diye hai songName and position ke liye
+        {
 
-                toggleSong();
-            });
+            var songName = songObj.fileName;
+            var id = '#song' + position; //#song ke saath position ko jod do and agar position 1 hai to output #song1 hogi jisse id mein store kar diya
+            $(id).click(function() //agar #song1 hai to one vaale div pe event lage ga
+                {
+                      songNumber= position
+                    var audio = document.querySelector('audio');
+                    var currentSong = audio.src;
+                    if (currentSong.search(songName) != -1) {
+                        toggleSong();
+                    } else {
+                        audio.src = songName;
+                        toggleSong();
+                        changeCurrentSongDetails(songObj);
+                    }
+                });
         }
 
         
