@@ -171,12 +171,12 @@
                 'image' : 'song7.jpg'
             },
             {
-                'name': 'Saathi Rey',
-                'artist': 'Arko',
-                'album': 'Kapoor & Sons',
-                'duration': '4:32',
-                'fileName': 'song8.mp3',
-                'image' : 'song8.jpg'
+                'name': 'Why Not Me',
+                'artist': 'Enrique Iglesias',
+                'album': 'Euphoria',
+                'duration': '3:38',
+                'fileName': 'song4.mp3',
+                'image' : 'song4.jpg'
             }]
             var audio =document.querySelector('audio')
             audio.src=songs2[0].fileName
@@ -216,12 +216,12 @@
                 'image' : 'song11.jpg'
             },
             {
-                'name': 'Saathi Rey',
-                'artist': 'Arko',
-                'album': 'Kapoor & Sons',
-                'duration': '4:32',
-                'fileName': 'song8.mp3',
-                'image' : 'song8.jpg'
+                'name': 'Jaaniya O Jaaniya',
+                'artist': 'Sidharth Basrur',
+                'album': 'Haunted',
+                'duration': '5:07',
+                'fileName': 'song2.mp3',
+                'image' : 'song2.jpg'
             }]    
             var audio =document.querySelector('audio')
             audio.src=songs3[0].fileName
@@ -262,12 +262,12 @@
                 'image' : 'song11.jpg'
             },
             {
-                'name': 'Saathi Rey',
-                'artist': 'Arko',
-                'album': 'Kapoor & Sons',
-                'duration': '4:32',
-                'fileName': 'song8.mp3',
-                'image' : 'song8.jpg'
+                'name': 'Why Not Me',
+                'artist': 'Enrique Iglesias',
+                'album': 'Euphoria',
+                'duration': '3:38',
+                'fileName': 'song4.mp3',
+                'image' : 'song4.jpg'
             }]    
             var audio =document.querySelector('audio')
             audio.src=songs4[0].fileName
@@ -299,20 +299,20 @@
                      'fileName': 'song18.mp3',
                      'image' : 'song18.jpg'
                 },
-                    {'name': 'FireWorks',
-                'artist': 'Katy Perry',
-                'album': 'Teenage Dream',
-                'duration': '3:53',
-                'fileName': 'song19.mp3',
-                'image' : 'song19.jpg'
-            },
-            {'name': 'Despacito (TEGOS.RU)',
+                {'name': 'Despacito (TEGOS.RU)',
                 'artist': 'Louis Fonsi, Daddy Yankee',
                 'album': 'TEGOS.RU',
                 'duration': '3:47',
                 'fileName': 'song20.mp3',
                 'image' : 'song20.jpeg'    
-            }]    
+            },
+            {    'name': 'Rockabye Baby',
+                     'artist': 'Clean Bandit',
+                     'album': 'Rockabye',
+                     'duration': '4:13',
+                     'fileName': 'song18.mp3',
+                     'image' : 'song18.jpg'
+                }]    
             var audio =document.querySelector('audio')
             audio.src=songs5[0].fileName
             toggleSong();
@@ -353,12 +353,12 @@
                 'image' : 'song11.jpg'
             },
             {
-                'name': 'Saathi Rey',
-                'artist': 'Arko',
-                'album': 'Kapoor & Sons',
-                'duration': '4:32',
-                'fileName': 'song8.mp3',
-                'image' : 'song8.jpg'
+                'name': 'Why Not Me',
+                'artist': 'Enrique Iglesias',
+                'album': 'Euphoria',
+                'duration': '3:38',
+                'fileName': 'song4.mp3',
+                'image' : 'song4.jpg'
             }]    
             var audio =document.querySelector('audio')
             audio.src=songs6[0].fileName
@@ -397,14 +397,13 @@
                        'fileName': 'song25.mp3',
                        'image' : 'song25.jpg'
                 },
-            {
-                'name': 'Saathi Rey',
-                'artist': 'Arko',
-                'album': 'Kapoor & Sons',
-                'duration': '4:32',
-                'fileName': 'song8.mp3',
-                'image' : 'song8.jpg'
-            }]    
+            {    'name': 'Mera Pehla Pehle Pyaar',
+                     'artist': '--',
+                     'album': 'Mera Pehla Pehle Pyaar',
+                     'duration': '4:31',
+                     'fileName': 'song10.mp3',
+                     'image' : 'song10.jpg'
+                }]    
             var audio =document.querySelector('audio')
             audio.src=songs7[0].fileName
             toggleSong();
