@@ -5,7 +5,7 @@
   <li>Happy</li><li>Heart Broke</li><li>Romantic</li><li>Roadtrip Mix</li><li>POP</li><li>Casual</li><li>Retro</li><li>EDM</li>
   </ul>
  <p>* Some songs in the lists are repeated so as to avoid the storage trouble and to lower the loading time</p>
- <img src="https://github.com/SyedHimaayath/Music-app/Img/Capture.gif" width="800px">
+ <img src="https://raw.githubusercontent.com/SyedHimaayath/Music-app/master/Img/Capture.GIF" width="800px">
  <p><b>Other features added are:</b>
   <ul>
   <li>Search and sort functionality using DataTables</li>
